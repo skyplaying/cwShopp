@@ -1,0 +1,21 @@
+{
+  "pages": [
+    "pages/index/index"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "宠善堂",
+    "navigationBarBackgroundColor": "skyblue",
+    "backgroundColor": "white"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "usingComponents": {
+    "load-image": "/components/uni-load-more/uni-load-more"
+  },
+  "sitemapLocation": "sitemap70.json"
+}

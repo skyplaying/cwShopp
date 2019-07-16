@@ -1,0 +1,9 @@
+{
+  "setting": {
+    "postcss": true,
+    "urlCheck": true,
+    "minified": true
+  },
+  "appid": "tt6be51d58f4cfeb59",
+  "projectname": "uni-cst"
+}

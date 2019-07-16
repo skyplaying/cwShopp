@@ -1,0 +1,13 @@
+{
+  "pages": [
+    "pages/index/index"
+  ],
+  "window": {
+    "defaultTitle": "宠善堂",
+    "titleBarColor": "skyblue",
+    "backgroundColor": "white"
+  },
+  "usingComponents": {
+    "load-image": "/components/uni-load-more/uni-load-more"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "pages": [
+    "pages/index/index"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "宠善堂",
+    "navigationBarBackgroundColor": "skyblue",
+    "backgroundColor": "white"
+  },
+  "usingComponents": {
+    "load-image": "/components/uni-load-more/uni-load-more"
+  }
+}

@@ -1,0 +1,57 @@
+
+
+[class*="icon-"] {
+	font-family: "iconfont";
+	font-size: inherit;
+	font-style: normal;
+}
+
+@font-face {
+  font-family: 'iconfont';  /* project id 1195992 */
+  src: url('//at.alicdn.com/t/font_1195992_rckaexgv51e.eot');
+  src: url('//at.alicdn.com/t/font_1195992_rckaexgv51e.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1195992_rckaexgv51e.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_1195992_rckaexgv51e.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1195992_rckaexgv51e.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1195992_rckaexgv51e.svg#iconfont') format('svg');
+}
+
+.icon-petClaw:before {
+  content: "\ea40";
+}
+
+.icon-arrow-right:before {
+  content: "\e62a";
+}
+
+.icon-arrow-left:before {
+  content: "\e62b";
+}
+
+.icon-edit:before {
+  content: "\e640";
+}
+
+.icon-add:before {
+  content: "\e657";
+}
+
+.icon-location:before {
+  content: "\e610";
+}
+
+.icon-arrow-bottom:before {
+  content: "\e61e";
+}
+
+.icon-arrow-top:before {
+  content: "\e61f";
+}
+
+.icon-shouji:before {
+  content: "\e609";
+}
+
+.icon-scan:before {
+  content: "\e68b";
+}
