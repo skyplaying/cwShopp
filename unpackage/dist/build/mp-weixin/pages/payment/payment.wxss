@@ -1,0 +1,59 @@
+.content {
+  width: 100%;
+  height: 350rpx;
+  background: #0e5e56;
+  color: #ffffff;
+  padding: 0rpx 40rpx 0 40rpx;
+}
+.box1 {
+  padding-top: 30rpx;
+}
+.box1 .t1 {
+  font-size: 28rpx;
+  font-family: Arial;
+}
+.box1 .t2 {
+  margin-left: 442rpx;
+  color: #ffffff;
+  font-size: 32rpx;
+  font-family: Arial;
+}
+.box2 {
+  color: #ffffff;
+  font-size: 28rpx;
+  font-family: Arial;
+}
+.withDrawBox {
+  padding-left: 40rpx;
+  height: 90rpx;
+  margin-top: 50rpx;
+}
+.withDrawBox .t1 {
+  margin-left: 16rpx;
+  color: #101010;
+  font-size: 34rpx;
+  text-align: left;
+  font-family: Arial;
+  vertical-align: middle;
+}
+.withDrawBox .withDrawIcon {
+  width: 40rpx;
+  height: 40rpx;
+  vertical-align: middle;
+  display: inline-block;
+}
+.withDrawBox .toRight {
+  width: 28rpx;
+  height: 28rpx;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 525rpx;
+}
+.balanceBox {
+  height: 180rpx;
+  line-height: 180rpx;
+  color: #ffffff;
+  font-size: 72rpx;
+  font-family: Arial;
+}
+

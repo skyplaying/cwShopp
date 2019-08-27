@@ -1,0 +1,176 @@
+.bannerImg {
+  width: 100%;
+  height: 386rpx;
+}
+.rejectReson {
+  margin-top: 15rpx;
+  width: 590rpx;
+  color: #000000;
+  font-size: 24rpx;
+  text-align: left;
+  font-family: PingFangSC-regular;
+}
+.rejectInfo {
+  margin-left: 46rpx;
+  padding-left: 30rpx;
+  width: 628rpx;
+  padding-bottom: 28rpx;
+  border-radius: 10rpx;
+  background-color: #a8d8b9;
+  color: #101010;
+  font-size: 28rpx;
+  font-family: Arial;
+}
+.rejectInfo .b2 {
+  margin-top: 46rpx;
+}
+.rejectInfo .b2 .tit1 {
+  color: #000000;
+  font-size: 24rpx;
+  text-align: left;
+  font-family: PingFangSC-regular;
+}
+.rejectInfo .b1 {
+  position: relative;
+  top: 18rpx;
+}
+.rejectInfo .b1 .warningIcon {
+  width: 40rpx;
+  height: 40rpx;
+  vertical-align: middle;
+}
+.rejectInfo .b1 .t1 {
+  color: #0e5e56;
+  font-size: 24rpx;
+  text-align: left;
+  font-family: PingFangSC-bold;
+  margin-left: 16rpx;
+  font-weight: bold;
+}
+.urlBox {
+  margin-top: 15rpx;
+}
+.urlBox .url {
+  color: #101010;
+  font-size: 28rpx;
+  text-align: left;
+  font-family: PingFangSC-regular;
+  margin-left: 166rpx;
+}
+.urlBox .copyBtn {
+  display: inline-block;
+  width: 112rpx;
+  height: 48rpx;
+  line-height: 48rpx;
+  border-radius: 30rpx;
+  background-color: rgba(255, 255, 255, 0);
+  color: #0e5e56;
+  font-size: 28rpx;
+  text-align: center;
+  font-family: Arial;
+  border: 2rpx solid #0e5e56;
+  margin-left: 70rpx;
+}
+.toIndex {
+  width: 100%;
+  height: 90rpx;
+  line-height: 40rpx;
+  background-color: rgba(255, 255, 255, 0);
+  color: #101010;
+  font-size: 28rpx;
+  text-align: center;
+  font-family: Arial;
+  border: 2rpx solid rgba(255, 255, 255, 0);
+  margin-top: 30rpx;
+}
+.tit2 {
+  color: #101010;
+  font-size: 28rpx;
+  text-align: center;
+  font-family: PingFangSC-regular;
+  margin-top: 190rpx;
+}
+.addShopBtn {
+  width: 590rpx;
+  height: 98rpx;
+  line-height: 98rpx;
+  border-radius: 10rpx;
+  background-color: #0e5e56;
+  border: 2rpx solid rgba(5, 5, 5, 0.08);
+  font-size: 36rpx;
+  text-align: center;
+  font-family: PingFangSC-regular;
+  color: white;
+  margin-top: 20rpx;
+  margin-left: 42rpx;
+}
+.auditTip {
+  position: absolute;
+  left: 115rpx;
+  margin-top: 20rpx;
+  width: 465rpx;
+  height: 88rpx;
+  line-height: 40rpx;
+  color: #666666;
+  font-size: 28rpx;
+  text-align: center;
+  font-family: Arial;
+}
+.flowBox {
+  position: relative;
+  left: 48rpx;
+  top: -62rpx;
+  width: 660rpx;
+  height: 386rpx;
+  background: white;
+  line-height: 20px;
+  border-radius: 20rpx;
+  color: #101010;
+  font-size: 28rpx;
+  text-align: center;
+  -webkit-box-shadow: 0px 0px 10rpx 4rpx rgba(255, 255, 255, 0);
+          box-shadow: 0px 0px 10rpx 4rpx rgba(255, 255, 255, 0);
+  font-family: Arial;
+  border: 2rpx solid rgba(255, 255, 255, 0);
+}
+.flowBox .numBox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 146rpx;
+  margin-top: 42rpx;
+}
+.flowBox .numBox > view {
+  width: 68rpx;
+  height: 68rpx;
+  line-height: 68rpx;
+  color: #101010;
+  font-size: 28rpx;
+  text-align: center;
+  font-family: Arial;
+  border: 2rpx solid #e6e6e6;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+.flowBox .numBox > image {
+  margin-left: 28rpx;
+  margin-right: 28rpx;
+  width: 35rpx;
+  height: 35rpx;
+  vertical-align: middle;
+  margin-top: 18rpx;
+}
+.flowBox .infoText {
+  margin-left: 136rpx;
+  margin-top: 16rpx;
+  height: 40rpx;
+  color: #101010;
+  font-size: 28rpx;
+  text-align: left;
+  font-family: PingFangSC-regular;
+}
+.flowBox .infoText > text {
+  margin-right: 45rpx;
+}
+

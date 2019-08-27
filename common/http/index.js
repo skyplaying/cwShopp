@@ -1,36 +1,18 @@
 import http from './interface'
 import rewrite from '@/common/http/alertApi.js'
 import common from '@/common/http/module/common.js'
-
-
+import file from '@/common/http/module/file.js'
+import map from '@/common/http/module/map.js'
+import pay from '@/common/http/module/pay.js'
+import user from '@/common/http/module/user.js'
+import shop from '@/common/http/module/shop.js'
+import pet from '@/common/http/module/pet.js'
+import alert from '@/common/http/alertApi.js'
 /**
  * 将业务所有接口统一起来便于维护
  * 如果项目很大可以将 url 独立成文件，接口分成不同的模块
  * 
  */
-
-// // 单独导出(测试接口) import {test} from '@/common/vmeitime-http/'
-// export const test = (data) => {
-// 	// http.config.baseUrl = "https://test.qipinke.com/petserver/api/"
-// 	//设置请求前拦截器
-// 	http.interceptor.request = (config) => {
-// 		config.header = {
-// 			"token": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-// 		}
-// 	}
-// 	//设置请求结束后拦截器
-// 	http.interceptor.response = (response) => {
-// 		console.log('个性化response....')
-// 		//判断返回状态 执行相应操作
-// 		return response;
-// 	}
-// 	return http.request({
-// 		baseUrl: 'https://unidemo.dcloud.net.cn/',
-// 		url: 'ajax/echo/text?name=uni-app',
-// 		dataType: 'text',
-// 		data,
-// 	})
-// }
 
 
 //设置请求结束后拦截器
@@ -90,4 +72,11 @@ export default {
 	getUserInfo,
 	...rewrite,
 	...common,
+	...file,
+	...map,
+	...pay,
+	...user,
+	...shop,
+	...pet,
+	...alert,
 }

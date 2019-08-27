@@ -1,0 +1,188 @@
+.addBtn {
+  margin-left: 40rpx;
+  margin-top: 50rpx;
+  margin-bottom: 50rpx;
+  width: 670rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  background-color: #0e5e56;
+  color: #ffffff;
+  font-size: 32rpx;
+  text-align: center;
+  font-family: Microsoft Yahei;
+}
+.selectRiteType {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 25rpx 0;
+}
+.selectRiteType > view {
+  margin-right: 40rpx;
+  width: 155rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-radius: 6rpx;
+  background-color: rgba(255, 255, 255, 0);
+  color: #0e5e56;
+  font-size: 24rpx;
+  text-align: center;
+  font-family: Microsoft Yahei;
+  border: 2rpx solid #0e5e56;
+}
+.selectRiteType > view:hover {
+  margin-right: 40rpx;
+  width: 155rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-radius: 6rpx;
+  background-color: #0e5e56;
+  color: #ffffff;
+  font-size: 24rpx;
+  text-align: center;
+  font-family: Microsoft Yahei;
+  border: 2rpx solid #0e5e56;
+}
+.imageUpload {
+  width: 125rpx;
+  height: 125rpx;
+  line-height: 40rpx;
+  border-radius: 4rpx;
+  background-color: #f0f0f0;
+  text-align: center;
+  border: 2rpx solid #e5e5e5;
+  margin-left: 430rpx;
+}
+.uploadImgBox {
+  margin-top: 30rpx;
+  width: 100%;
+  height: 170rpx;
+  line-height: 170rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.uploadImgBox .tit {
+  color: #101010;
+  font-size: 32rpx;
+  text-align: left;
+  font-family: PingFangSC-regular;
+}
+.uploadImgBox .img {
+  position: absolute;
+  left: 180rpx;
+  z-index: 20;
+}
+.selectBox {
+  position: relative;
+}
+.selectBox .bottomArrows {
+  width: 15rpx;
+  height: 15rpx;
+  position: absolute;
+  left: 125rpx;
+  top: 18rpx;
+}
+.box2 .tit {
+  margin-top: 28rpx;
+  display: block;
+}
+.box2 .explain {
+  margin-top: 15rpx;
+  width: 650rpx;
+  height: 180rpx;
+  padding: 20rpx;
+  line-height: 40rpx;
+  color: #888888;
+  font-size: 28rpx;
+  text-align: left;
+  font-family: Microsoft Yahei;
+  border: 2rpx solid #eaeaea;
+}
+.units {
+  position: absolute;
+  right: 55rpx;
+  top: 18rpx;
+  width: 130rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  color: #101010;
+  font-size: 28rpx;
+  font-family: Microsoft Yahei;
+  border: 2rpx solid #bbbbbb;
+  border-radius: 15rpx;
+  padding-left: 20rpx;
+}
+.selectPop {
+  width: 150rpx;
+  border: 1rpx solid #888888;
+  display: inline-block;
+  position: absolute;
+  right: 25rpx;
+  margin-top: -19rpx;
+}
+.selectPop .s1 {
+  width: 130rpx;
+  height: 35rpx;
+  text-align: left;
+  font-size: 25rpx;
+  line-height: 35rpx;
+  border: none;
+  padding-left: 25rpx;
+  margin-top: 5rpx;
+}
+.selectPop .s1:hover {
+  background: #108ee9;
+  color: white;
+}
+.pr60 {
+  position: relative;
+  right: 180rpx;
+}
+.content {
+  padding: 30rpx;
+  width: 100%;
+}
+.content .input {
+  width: 300rpx;
+  height: 60rpx;
+  font-size: 32rpx;
+  text-align: left;
+  font-family: Microsoft Yahei;
+  display: inline-block;
+  vertical-align: middle;
+}
+.content .t1 {
+  color: #101010;
+  font-size: 32rpx;
+  text-align: left;
+  font-family: PingFangSC-regular;
+  vertical-align: middle;
+}
+.content .box1 {
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  color: #101010;
+  font-size: 28rpx;
+  font-family: Arial;
+  position: relative;
+  border-bottom: 2rpx solid #e5e5e5;
+}
+.content .box1 .t2 {
+  margin-left: 313rpx;
+  font-size: 32rpx;
+  color: #333333;
+  font-family: Microsoft Yahei;
+  vertical-align: middle;
+}
+.toRight {
+  width: 36rpx;
+  height: 36rpx;
+  position: absolute;
+  right: 57rpx;
+  top: 32rpx;
+}
+

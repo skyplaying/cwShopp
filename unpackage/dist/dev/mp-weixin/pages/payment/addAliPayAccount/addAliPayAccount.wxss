@@ -1,0 +1,78 @@
+.submitBtn {
+  margin-left: 32rpx;
+  margin-top: 60rpx;
+  width: 686rpx;
+  height: 94rpx;
+  line-height: 94rpx;
+  border-radius: 10rpx;
+  background-color: #0e5e56;
+  color: #ffffff;
+  font-size: 36rpx;
+  text-align: center;
+  font-family: Microsoft Yahei;
+}
+.authCodeBox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 90rpx;
+  line-height: 90rpx;
+  margin-left: 50rpx;
+  font-size: 32rpx;
+  margin-top: 20rpx;
+  font-family: Arial;
+}
+.authCodeBox .t1 {
+  vertical-align: middle;
+}
+.authCodeBox .getAuthCodeBtn {
+  margin-left: 20rpx;
+  width: 220rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  background-color: #a8d8b9;
+  color: #24936e;
+  font-size: 30rpx;
+  text-align: center;
+  font-family: Arial;
+}
+.authCodeBox .authCodeInput {
+  margin-left: 22rpx;
+  width: 320rpx;
+  height: 90rpx;
+  background-color: rgba(255, 255, 255, 0);
+  color: #cccccc;
+  font-size: 28rpx;
+  text-align: left;
+  font-family: Microsoft Yahei;
+}
+.alipayNumBox {
+  width: 100%;
+  height: 90rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 90rpx;
+}
+.alipayNumBox .t1 {
+  color: #101010;
+  font-size: 32rpx;
+  text-align: left;
+  font-family: Arial;
+  margin-left: 50rpx;
+}
+.alipayNumBox .input1 {
+  position: absolute;
+  left: 258rpx;
+  width: 400rpx;
+  height: 90rpx;
+  color: #888888;
+  font-size: 28rpx;
+  text-align: left;
+  font-family: Microsoft Yahei;
+  border: 2rpx solid rgba(255, 255, 255, 0);
+}
+

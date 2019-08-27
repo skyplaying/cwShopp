@@ -1,0 +1,1 @@
+<view class="page"><block wx:if="{{isok}}"><view class="container"><view class="content"></view><block wx:if="{{isBottom}}"><view class="lineBox"><view class="line"></view><text class="t1">我是有底线的</text><view class="line"></view></view></block></view></block></view>

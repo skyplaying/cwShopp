@@ -1,0 +1,148 @@
+.banner {
+  width: 100%;
+  height: 322rpx;
+}
+.authPop {
+  width: 560rpx;
+  height: 565rpx;
+  line-height: 40rpx;
+  border-radius: 10rpx;
+  background: white;
+  text-align: center;
+  border: 2rpx solid #bbbbbb;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -280rpx;
+  margin-left: -282rpx;
+  z-index: 99;
+}
+.authPop .authBtn {
+  margin-left: 80rpx;
+  margin-top: 25rpx;
+  width: 400rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 10rpx;
+  background-color: #0e5e56;
+  color: #ffffff;
+  font-size: 28rpx;
+  text-align: center;
+  font-family: Arial;
+  border: 2rpx solid rgba(255, 255, 255, 0);
+}
+.authPop .t1 {
+  color: #101010;
+  font-size: 28rpx;
+  text-align: center;
+  font-family: PingFangSC-regular;
+  margin-top: 90rpx;
+  display: block;
+}
+.authPop .tip1 {
+  text-align: left;
+  color: #999999;
+  font-size: 28rpx;
+  font-family: PingFangSC-regular;
+  width: 482rpx;
+  height: 120rpx;
+  margin-left: 40rpx;
+  margin-top: 25rpx;
+}
+.authPop .v1 {
+  width: 100%;
+  height: 156rpx;
+  border-radius: 10rpx 10rpx 0px 0px;
+  background: #0e5e56;
+}
+.authPop .v1 .logo {
+  width: 145rpx;
+  height: 145rpx;
+  margin-top: 68rpx;
+}
+.mb50 {
+  margin-bottom: 130rpx;
+  display: block;
+  font-size: 24rpx;
+  font-family: PingFangSC-regular;
+}
+.submitWait .coffee {
+  margin-left: 290rpx;
+  margin-top: 30rpx;
+  width: 185rpx;
+  height: 190rpx;
+}
+.submitWait .tip1 {
+  color: #101010;
+  font-size: 24rpx;
+  text-align: center;
+  margin-top: 35rpx;
+}
+.submitWait .tip2 {
+  color: #101010;
+  font-size: 24rpx;
+  text-align: center;
+  margin-top: 18rpx;
+}
+.submitWait .tip2 .phone {
+  color: #0e5e56;
+  margin-left: 20rpx;
+}
+.content {
+  padding: 30rpx 0rpx;
+  margin-left: 24rpx;
+  width: 702rpx;
+}
+.content .tip {
+  font-size: 24rpx;
+  font-family: PingFangSC-regular;
+  margin-bottom: 28rpx;
+}
+.content .input {
+  width: 665rpx;
+  height: 90rpx;
+  background-color: rgba(255, 255, 255, 0);
+  color: #999999;
+  font-size: 28rpx;
+  text-align: left;
+  font-family: Microsoft Yahei;
+  border: 2rpx solid #eaeaea;
+  margin-bottom: 12rpx;
+  padding-left: 30rpx;
+}
+.content .yanzCode {
+  width: 420rpx;
+  height: 90rpx;
+  background-color: rgba(255, 255, 255, 0);
+  color: #999999;
+  font-size: 28rpx;
+  text-align: left;
+  font-family: Microsoft Yahei;
+  border: 2rpx solid #eaeaea;
+  display: inline-block;
+  padding-left: 30rpx;
+}
+.content .getAuthCode {
+  margin-left: 20rpx;
+  width: 225rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  background-color: #eaeaea;
+  color: #0e5e56;
+  font-size: 30rpx;
+  text-align: center;
+  font-family: Arial;
+  display: inline-block;
+}
+.submitBtn {
+  width: 710rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  background-color: #0e5e56;
+  color: #ffffff;
+  font-size: 32rpx;
+  text-align: center;
+  font-family: Arial;
+  margin-top: 60rpx;
+}
+

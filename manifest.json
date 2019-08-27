@@ -1,7 +1,7 @@
 {
-    "name" : "uni-cst",
+    "name" : "cst-shopp",
     "appid" : "__UNI__B501FEB",
-    "description" : "",
+    "description" : "一款宠物善终的小程序",
     "versionName" : "1.0.0",
     "versionCode" : "100",
     "transformPx" : false,
@@ -55,16 +55,17 @@
     "quickapp" : {},
     /* 小程序特有相关 */
     "mp-weixin" : {
-        "appid" : "wxa8d36cc0991498ac",
+        "appid" : "wx2b98bf5f6faad26f",
         "setting" : {
             "urlCheck" : false,
             "postcss" : true,
-            "minified" : true
+            "minified" : true,
+            "es6" : true
         },
         "usingComponents" : true,
         "permission" : {
             "scope.userLocation" : {
-                "desc" : "你的位置信息将用于小程序位置接口的效果展示"
+                "desc" : "宠善堂需要获取您的位置信息提供服务"
             }
         }
     },
@@ -75,7 +76,7 @@
         "usingComponents" : true,
         "appid" : "16649390",
         "setting" : {
-            "urlCheck" : true
+            "urlCheck" : false
         }
     },
     "mp-toutiao" : {
@@ -83,8 +84,9 @@
         "appid" : "tt6be51d58f4cfeb59",
         "setting" : {
             "postcss" : true,
-            "urlCheck" : true,
-            "minified" : true
+            "urlCheck" : false,
+            "minified" : true,
+            "es6" : true
         }
     }
 }

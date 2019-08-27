@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "添加服务",
+  "usingComponents": {
+    "upload-img": "/components/mc-image-upload/mc-image-upload"
+  }
+}

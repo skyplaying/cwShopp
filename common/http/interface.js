@@ -9,6 +9,8 @@ import Session from './lib/session'
 import constants from './lib/alipay/constants'
 import loginLib from './lib/alipay/aLogin'
 // #endif
+
+
 // 其他非支付宝小程序端
 // #ifndef MP-ALIPAY
 import loginLib from './lib/login'
@@ -16,37 +18,30 @@ import constants from './lib/constants'
 // #endif
 
 
-
-
 // production 生产环境
-let baseUrl = "https://dogecard.qipinke.com/dogecard_api_server/api/";
-
+let baseUrl = "";
+	// baseUrl = "https://miniapp.petout.cn/petoutServer"
 if (process.env.NODE_ENV === 'development') {
-	baseUrl = "https://test.qipinke.com/petserver/api/"
-	// baseUrl = "http://192.168.0.240:8082/dogecard_api_server/api/"
+	baseUrl = "https://test.qipinke.com/petoutServer_test"
+}else{
+	baseUrl = "https://miniapp.petout.cn/petoutServer"
 }
-// 设置登录地址
-loginLib.setLoginUrl(baseUrl + 'auth/petPatronLogin');
-// loginLib.setLoginUrl(baseUrl + 'wxuser/login');
+// 设置登录后用户信息请求路径
+loginLib.setLoginUrl(baseUrl + ' ');
 
 export default {
 	config: {
 		baseUrl,
 		uploadUrl: baseUrl + "file/uploadFile",
 		header: {
-			// #ifdef MP-ALIPAY
+			// 'Content-Type': 'application/json;charset=UTF-8',
 			'Content-Type': 'application/x-www-form-urlencoded'
-			// #endif
-			// #ifndef MP-ALIPAY
-			'Content-Type': 'application/json;charset=UTF-8',
-			// #endif
-			
 		},
 		data: {},
 		method: "POST",
 		dataType: "json",
 		/* 如设为json，会对返回的数据做一次 JSON.parse */
-		responseType: "text",
+		// responseType: "text",
 		/* login为true时需要登录鉴权 */
 		login: false,
 		/* loginType为1时需要授权登录 */
@@ -60,12 +55,11 @@ export default {
 		response: null
 	},
 	request(options) {
-
+		
 		options = Object.assign({}, this.config, options);
 		options.url = options.baseUrl + options.url;
-
-		// 登录后再请求
-		const doRequestWithLogin = () => {
+		
+      	const doRequestWithLogin = () => {
 			return new Promise((resolve, reject) => {
 				loginLib.login({
 					loginType: options.loginType,
@@ -87,9 +81,20 @@ export default {
 		const doRequest = () => {
 			//TODO 加密数据[进行data的aes接口加密(已经加密的不要重复加密，不然会报错)]
 			if (!options.data.sign) {
-				var sign = Aes.sign(options.data);
-				options.data.sign = sign;
+				    if(!options.data.timestamp){
+						const da=options.data;
+						// console.log(da)
+						let sign = Aes.sign(da);
+						options.data.sign = sign;
+						// console.log('sign',sign)
+					}
 			}
+			
+			if(options.data.sign){
+				options.data.timestamp=getTimeStamp();
+			}
+					
+	
 			//TODO 数据签名
 			/* 
 			_token = {'token': getStorage(STOREKEY_LOGIN).token || 'undefined'},
@@ -97,28 +102,26 @@ export default {
 			options.header = Object.assign({}, options.header, _token,_sign) 
 			*/
 			const session = Session.get();
-			// #ifdef MP-ALIPAY
+			
+			// #ifdef MP-ALIPAY 
 			if (session && session[constants.HEADER_TOKEN_KEY_NAME]) {
 				options.header[constants.HEADER_TOKEN] = session[constants.HEADER_TOKEN_KEY_NAME];
 			}
 			// #endif
+			
 			// #ifndef MP-ALIPAY
 			if (session && session.id && session.skey) {
 				options.header[constants.WX_HEADER_ID] = session.id;
 				options.header[constants.WX_HEADER_SKEY] = session.skey;
 			}
 			// #endif
+			
 			return new Promise((resolve, reject) => {
 				let _config = null
-
 				options.complete = (response) => {
-					let statusCode = response.statusCode
+					let statusCode = response.statusCode //返回状态码
 					response.config = _config
-					// if (process.env.NODE_ENV === 'development') {
-					// 	if (statusCode === 200) {
-					// 		console.log("【" + _config.requestId + "】 结果：" + JSON.stringify(response.data))
-					// 	}
-					// }
+	
 					if (this.interceptor.response) {
 						let newResponse = this.interceptor.response(response)
 						if (newResponse) {
@@ -138,19 +141,19 @@ export default {
 							if (!hasRetried) {
 								hasRetried = true;
 								console.log('重新请求');
-
 								this.doRequestWithLogin()
 								that.request(options).then((response) => {
 									resolve(response);
 								}).catch((err) => {
 									reject(response)
-								});;
+								});
 								return;
 							}
 							reject(response)
 							return;
 						}
 						// #endif
+						
 						// #ifndef MP-ALIPAY
 						// 如果响应的数据里面包含 SDK Magic ID，表示被服务端 SDK 处理过，此时一定包含登录态失败的信息
 						if (data && data[constants.WX_SESSION_MAGIC_ID]) {
@@ -173,6 +176,7 @@ export default {
 							return;
 						}
 						// #endif
+						
 						resolve(response);
 					} else {
 						reject(response)
@@ -180,7 +184,8 @@ export default {
 				}
 
 				_config = Object.assign({}, this.config, options)
-				_config.requestId = new Date().getTime()
+				// _config.requestId = new Date().getTime()
+				// _config.timestamp=getTimeStamp()
 
 				if (this.interceptor.request) {
 					this.interceptor.request(_config)
@@ -195,7 +200,7 @@ export default {
 				// 		console.log("【" + _config.requestId + "】 参数：" + JSON.stringify(_config.data))
 				// 	}
 				// }
-
+				// 封装请求
 				uni.request(_config);
 			});
 		}
@@ -285,4 +290,23 @@ function _reslog(res) {
 	// 	default:
 	// 		break;
 	// }
+}
+function getTimeStamp() {
+	const now = new Date()
+	const year = now.getFullYear();
+	let month = now.getMonth() + 1;
+	let day = now.getDate();
+	let hour = now.getHours();
+	let minutes = now.getMinutes();
+	let seconds = now.getSeconds();
+	let milliseconds = now.getMilliseconds(); //毫秒
+	String(month).length < 2 ? (month = "0" + month) : month;
+	String(day).length < 2 ? (day = "0" + day) : day;
+	String(hour).length < 2 ? (hour = "0" + hour) : hour;
+	String(minutes).length < 2 ? (minutes = "0" + minutes) : minutes;
+	String(seconds).length < 2 ? (seconds = "0" + seconds) : seconds;
+	String(milliseconds).length < 2 ? (milliseconds = "0" + milliseconds) : milliseconds;
+	let yyyyMMddHHmmss = year + '' + month + '' + day + '' + hour + '' + minutes + '' + seconds + '' + milliseconds;
+	yyyyMMddHHmmss=parseInt(yyyyMMddHHmmss)
+	return yyyyMMddHHmmss;
 }

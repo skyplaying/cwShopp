@@ -1,6 +1,8 @@
 var constants = require('./constants');
 var Session = require('./session');
 
+//微信端及其他非支付宝端小程序登录
+
 /***
  * @class
  * 表示登录过程中发生的异常
@@ -35,7 +37,7 @@ var getWxLoginResult = function getLoginCode(callback) {
 				},
 
 				fail: function(userError) {
-					var error = new LoginError(constants.ERR_WX_GET_USER_INFO, '获取微信用户信息失败，请检查网络状态');
+					var error = new LoginError(constants.ERR_WX_GET_USER_INFO, '获取用户信息失败，请检查网络状态');
 					error.detail = userError;
 					callback(error, null);
 				},
@@ -43,7 +45,7 @@ var getWxLoginResult = function getLoginCode(callback) {
 		},
 
 		fail: function(loginError) {
-			var error = new LoginError(constants.ERR_WX_LOGIN_FAILED, '微信登录失败，请检查网络状态');
+			var error = new LoginError(constants.ERR_WX_LOGIN_FAILED, '登录失败，请检查网络状态');
 			error.detail = loginError;
 			callback(error, null);
 		},
@@ -85,8 +87,8 @@ var login = function login(options) {
 		var userInfo = wxLoginResult.userInfo;
 
 		// 构造请求头，包含 code、encryptedData 和 iv
-		var code = wxLoginResult.code;
-		var encryptedData = wxLoginResult.encryptedData;
+		var code = wxLoginResult.code; //用户登录返回的code
+		var encryptedData = wxLoginResult.encryptedData; 
 		var iv = wxLoginResult.iv;
 		var header = {};
 

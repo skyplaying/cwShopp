@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "2/3",
+  "usingComponents": {
+    "upload-img": "/components/mc-image-upload/mc-image-upload"
+  }
+}

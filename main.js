@@ -1,15 +1,15 @@
 
 import Vue from 'vue'
 import App from './App'
-
 import store from './store'
 import api from '@/common/http/'
 import loadImage from './components/uni-load-more/uni-load-more';
-
+import http from '@/common/http/interface'
 Vue.config.productionTip = false
 
 Vue.prototype.$store = store
 Vue.prototype.$api = api
+Vue.prototype.$http=http
 Vue.prototype.$backgroundAudioData = {
 	playing: false,
 	playTime: 0,

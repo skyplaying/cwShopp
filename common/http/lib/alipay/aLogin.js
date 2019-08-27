@@ -27,13 +27,12 @@ var getWxLoginResult = function getLoginCode(loginType, callback) {
 	console.log(loginType)
 	let scopes = ["auth_base"];
 	if (loginType == "1") {
-		scopes = ["auth_user", "auth_zhima"]
+		scopes = ["auth_user"] //删除芝麻信用
 	}
 	var i = 0
 	my.getAuthCode({
 		scopes,
 		success: function(loginResult) {
-			// console.log(loginResult)
 			new Promise((resolve, reject) => {
 				resolve();
 			}).then(() => {
@@ -46,7 +45,7 @@ var getWxLoginResult = function getLoginCode(loginType, callback) {
 		},
 
 		fail: function(loginError) {
-			var error = new LoginError(constants.ERR_LOGIN_FAILED, '支付宝授权失败，  需要您的授权才可以正常使用');
+			var error = new LoginError(constants.ERR_LOGIN_FAILED, '支付宝授权失败，需要您的授权才可以正常使用');
 			error.detail = loginError;
 			callback(error, null);
 		},
@@ -92,8 +91,7 @@ var login = function login(options) {
 		var code = wxLoginResult.code + '';
 		var loginType = options.loginType + '';
 		var header = {};
-
-		header[constants.HEADER_CODE] = code;
+		header[constants.HEADER_CODE] = code;  //
 		header[constants.LOGIN_TYPE] = loginType;
 
 		// 进行data的aes接口加密
@@ -102,20 +100,17 @@ var login = function login(options) {
 		data.sign = sign;
 		options.data = data;
 
-		// 请求服务器登录地址，获得会话信息
-		my.httpRequest({
+		// 请求服务器登录地址，获得会话信息 
+		uni.request({
 			url: options.loginUrl,
 			headers: header,
 			method: options.method,
 			data: options.data,
-
 			success: function(result) {
 				console.log(result);
 				var data = result.data;
-
 				// 成功地响应会话信息
 				if (data && data.resultCode == 'Y') {
-
 					if (data.session) {
 						data.session.isAuthUser = options.loginType;
 						Session.set(data.session);
@@ -156,6 +151,7 @@ var login = function login(options) {
 	}
 };
 
+//设置登录地址
 var setLoginUrl = function(loginUrl) {
 	defaultOptions.loginUrl = loginUrl;
 };

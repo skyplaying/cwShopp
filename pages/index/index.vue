@@ -1,364 +1,289 @@
 <template>
 	<view class="page">
-		<view class="conatiner" v-if="isok">
-			<view class="mc-bg-white p15">
-				<view class="mc-space-between mc-f14">
-					<view class="icon-location mc-light-gray" @click="chooseCity">
-						<text class="ml5 mc-black">{{city}}</text>
-					</view>
-					<view class="icon-scan mc-blue">
-						<text class="ml5 mc-black" @click="">扫码进店</text>
-					</view>
+		<view class="container" v-if="isok">
+			<view class="head">
+		<!-- 		[{"storeId":3,"servicerUserId":14,"storeState":2,"storeInfoState":1,"storeName":"ghrgr","storeCheckState":0,"storePhoneNumber":"17603003901","storeAddress":"广东省深圳市南山区南海大道3688号","storeDetailedAddress":"grgrgrg","storeLongitude":113.93664,"storeLatitude":22.532323,"storePictureLinks":"https://image.petout.cn/petout/image/201908221634258737UTMIJ.png,https://image.petout.cn/petout/image/201908221634302242CMEJA.png","storeBusinessHours":"8:00-8:00","storeLogoPictureLink":"https://image.petout.cn/petout/image/20190822163422223N0IMGI.png","storeCarHeadPictureLink":"https://image.petout.cn/petout/image/20190822163434986MSG4GQ.png","storeCarNumberPlatePictureLink":"https://image.petout.cn/petout/image/20190822163438281JDGQWP.png","storeBusinessLicensePictureLink":"https://image.petout.cn/petout/image/20190822163442512UZ2WZM.png","storeIntroduction":"gegegegege","storeCreateTime":"2019-08-22 16:34:48"}] -->
+				<image :src="storesInfo.storeLogoPictureLink" mode="aspectFill" class="shopLogo"></image>
+				<view class="box2">
+					<text class="shopName">{{storesInfo.storeName}}</text>
+					<view class="authIcon">{{userInfo.realName?'已认证':'待认证'}}</view>
+					<image src="../../static/shop/toBottom.png" mode="widthFix" class="toBottom"></image>
+					<view class="addr">{{storesInfo.storeAddress}}</view>
 				</view>
-				<view class="banner mt15">
-					<image src="../../static/banner.png" mode="widthFix"></image>
+				<view class="shopManage">店铺管理</view>
+			</view>
+			<!--  今天订单 今日收款 -->
+			<view class="todayData">
+				<view class="to1">
+					<text class="num">0</text>
+					<view class="tit">今日订单</view>
+				</view>
+				<view class="line"></view>
+				<view class="to1">
+					<text class="num">0.00</text>
+					<view class="tit">今日收款</view>
 				</view>
 			</view>
-			<!-- <map style="width: 100%; height: 300px;" :latitude="latitude" :longitude="longitude"></map> -->
 
-
-
-			<!--  列表标题-->
-			<view class="mc-bg-white p15 mt10 listFont" v-if="storeList[0]">{{!storeList[0].lastBrowseTime?'附近':'最近使用'}}</view>
-			<view class="uni-list">
-				<view class="shopBox" v-for="(item,index) in storeList" :key="index" @click="">
-					<image class="shopImage" lazy-load :src="item.shopsHead"></image>
-					<view class="shopInfo">
-						<text class="mc-f16">{{item.shopsName}}\n</text>
-						<text class="mc-f12 shopType">{{item.shopsType}}\n</text>
-						<text class="mc-f12 addr">{{item.shopsAddress}}</text>
-					</view>
-					<view>
-						<text class="mc-f12 shop-distance">{{item.distanceStr}}</text>
+			<!--  订单提醒 -->
+			<view class="orderAlert">
+				<image src="../../static/shop/xiaoxi.png" mode="aspectFit" class="mes"></image>
+				<text class="mesType">你有1个新的订单信息</text>
+				<text class="mestip mesType">订单</text>
+				<text class="minBe">5分钟前</text>
+				<image src="../../static/shop/you.png" mode="widthFix"  class="toright"></image>
+			</view>
+			<!--  九宫格列表 -->
+			<view class="Sudoku">
+				<view class="" v-for="(item, index) in seviceImgNowList[0]" :key="index">
+					<view class="box1" :style="index <= 5 ? border1 : border2" @click="toPage(pageList[index])">
+						<image :src="'/static/shop/' + item" mode="aspectFit" class="serviceImg"></image>
+						<text class="text">{{ seviceImgNowList[1][index] }}</text>
 					</view>
 				</view>
 			</view>
-			<uni-load-more :status="status"></uni-load-more>
-		</view>
-		<view class="container-loading" v-else>
-			<image src="../../static/loading.gif"></image>
 		</view>
 	</view>
 </template>
-
 <script>
-	let _self;
-	let gData = {};
-	import Vue from 'vue'
-	import {
-		mapActions,
-	} from 'vuex'
-	import uniLoadMore from '../../components/uni-load-more/uni-load-more.vue';
-	export default {
-		data() {
-			return {
-				isok: true,
-				city: '',
-				storeList: [],
-				total: 0,
-				status: "more",
-				provider: '',
-				latitude: 39.909,
-				longitude: 116.39742,
+// import QQMapWX from '../../common/http/module/qqmap-wx-jssdk.js';
+// let qqmapsdk;
+export default {
+	data() {
+		return {
+			isok: true,
+			storesInfo:'',
+			stateText:'',
+			seviceImgList: [
+				'/static/shop/love.png',
+				'/static/shop/good.png',
+				'/static/shop/getMoney.png',
+				'/static/shop/jiaoche.png',
+				'/static/shop/zhuandan.png',
+				'/static/shop/fahuo.png',
+				'/static/shop/jiameng.png',
+				'/static/shop/yuangongguanli.png',
+				'/static/shop/daili.png'
+			],
+			pageList:['../service/publishingService/publishingService','../service/postTrade/postTrade'],
+			seviceImgNowList: [
+				['love.png', 'good.png', 'shoukuan.png', 'huijiaoche.png', 'huizhuandan.png', 'huifahuo.png', 'huijiameng.png', 'huiyuangongguanli.png', 'huidaili.png'],
+				['发布服务', '发布商品', '收款', '帮忙叫车', '转单', '发货', '加盟招商', '员工管理', '代理商品'],
+				['']
+			],
+			border1: 'border-right: 1px solid #efefef;border-bottom: 1px solid #efefef;',
+			border2: 'border-right: 1px solid #efefef;'
+		};
+	},
+	onLoad() {
+		this.init()
+
+	},
+	methods: {
+		init(){
+		this.storesInfo=uni.getStorageSync('storesInfo')
+		this.userInfo=uni.getStorageSync('user')
+		},
+		toPage(page){
+			console.log(page)
+			if(page){
+				uni.navigateTo({
+					url:page,
+				})
 			}
 		},
-		onLoad() {
-			_self = this;
-			// 初始化页面 
-			this.initPage();
-			uni.getProvider({
-				service: 'oauth', //登录
-				success: function(res) {
-					_self.provider = res.provider;
-					console.log(res.provider)
-					uni.login({
-						provider: res.provider,
-						success: function(loginRes) {
-							console.log(JSON.stringify(loginRes));
-						}
-					});
-
+		getCity() {
+			uni.getLocation({
+				success(e) {
+					console.log(e);
+					let latitude=e.latitude
+					let longitude=e.latitude
+					console.log(latitude,longitude)
+;
 				}
 			});
-		},
-		onShow() {
-			_self.sub()
-			_self.login()
-		},
-		// 关闭页面
-		onUnload() {
-			gData = {};
-		},
-		// 下拉刷新页面 （全局）
-		onPullDownRefresh() {
-			this.initPage()
-		},
-		//上拉加载 (查询新的列表数据添加到数组里)
-		onReachBottom() {
-			this.loadList()
-		},
-		components: {
-			uniLoadMore
-		},
-		methods: {
-			// 获取当前城市 登录
-			...mapActions(["getCity", "doLogin"]),
-			//  初始化页面
-			initPage() {
-				this.getCity({
-					success: (city, location) => {
-						_self.doLogin({
-							loginType: "0",
-							success: userInfo => {
-								gData.latPoint = location && location.latitude ? location.latitude : null
-								gData.lngPoint = location && location.longitude ? location.longitude : null
-								gData.adcode = city.adcode
-								gData.userInfo = userInfo
-								_self.city = city.city
-								_self.initList(); //初始化（清空上一次的数据）再加载列表
-
-							}
-						})
-					}
-				})
-
-			},
-			// 初始化宠物店列表
-			initList() {
-				gData.storePage = 0;
-				this.storeList = [];
-				this.total = 0;
-				this.status = "more";
-				this.loadList();
-			},
-			// 加载宠物店列表
-			loadList() {
-				if (this.status != "noMore") {
-					const shopsLng = this.lngPoint;
-					const shopsLat = this.latPoint;
-					const shopsCity = this.city;
-					const page = gData.storePage + 1;
-					this.status = "loading";
-					uni.showNavigationBarLoading();
-					this.$api.queryShopsList({
-						page,
-						pageSize: 8,
-						shopsLng,
-						shopsLat,
-						shopsCity,
-					}).then((res) => {
-						const data = res.data;
-						console.log(data)
-						const addList = (data.results || []).map(item => {
-							const shopsAddress = item.shopsAddress ? item.shopsAddress.split(':')[1] : null;
-							const distanceStr = item.distanceStr ? item.distanceStr.replace('m', '米').replace('k', '千') : ''; // 路程替换
-							return {
-								shopsId: item.shopsId,
-								shopsName: item.shopsName,
-								shopsHead: item.shopsHead,
-								shopsType: item.shopsType,
-								distanceStr: distanceStr,
-								shopsAddress: shopsAddress,
-								lastBrowseTime: item.lastBrowseTime,
-							}
-						})
-						_self.storeList = _self.storeList.concat(addList);
-						gData.storePage = data.page;
-						_self.status = data.noMore ? "noMore" : "more";
-						_self.total = data.total;
-						_self.isok = true;
-						// console.log(this.$data)
-						uni.hideNavigationBarLoading();
-						uni.stopPullDownRefresh(); //得到数据后停止下拉刷新
-					}).catch((err) => {
-						_self.status = "more";
-						console.log('request fail', err);
-					});
-				}
-			},
-			chooseCity() {
-				// uni.getLocation({
-				// 	success: function(res) {
-				// 		console.log('位置名称：' + res.name);
-				// 		console.log('详细地址：' + res.address);
-				// 		console.log('纬度：' + res.latitude);
-				// 		console.log('经度：' + res.longitude);
-				// 		if (res) {
-				// 			uni.openLocation({
-				// 				longitude: '121.549697',
-				// 				latitude: '31.227250',
-				// 				name: '支付宝',
-				// 				address: '杨高路地铁站',
-				// 				success: (data) => {
-				// 					console.log(data)
-				// 				}
-				// 			})
-				// 		}
-				// 	}
-				// });
-				// uni.openLocation({
-				// 	longitude: '121.549697',
-				// 	latitude: '31.227250',
-				// 	name: '支付宝',
-				// 	address: '杨高路地铁站',
-				// 	success: (data) => {
-				// 		console.log(data)
-				// 	}
-				// })
-				uni.chooseLocation({
-					success: function(res) {
-						console.log('位置名称：' + res.name);
-						console.log('详细地址：' + res.address);
-						console.log('纬度：' + res.latitude);
-						console.log('经度：' + res.longitude);
-						let name = res.name.toString()
-						let address = res.address.toString()
-						if (res) {
-							uni.openLocation({
-								latitude: res.latitude,
-								longitude: res.longitude,
-								name: name,
-								address: address,
-								success: (data) => {
-									console.log(data)
-								}
-							})
-						}
-					}
-				});
-
-
-			},
-			sub() {
-				//  配置百度页面基础配置
-				//#ifdef MP-BAIDU
-				swan.setPageInfo({
-					title: '',
-					keywords: '',
-					description: '',
-					articleTitle: '',
-					releaseDate: '2019-07-13 15:44:00',
-					image: [
-						'/static/banner.png',
-						'/static/loading.gif'
-					],
-					success: function() {
-						console.log('setPageInfo success');
-					},
-					fail: function(err) {
-						console.log('setPageInfo fail', err);
-					}
-				})
-				//#endif
-
-			},
-			login() {
-				uni.login({
-					success: (e) => {
-						console.log(e)
-						if (e) {
-							uni.getUserInfo({
-								success: (e) => {
-									console.log(e)
-								}
-							})
-						}
-					}
-				})
-				//#ifndef MP-ALIPAY
-				uni.checkSession({
-					success: (e) => {
-						console.log('会话', e)
-					}
-				})
-				//#endif
-
-				// uni.getLocation({
-				// 	type: 'gcj02', //返回可以用于uni.openLocation的经纬度
-				// 	success: function(res) {
-				// 		const latitude = res.latitude;
-				// 		const longitude = res.longitude;
-				// 		console.log(res)
-				// 		uni.openLocation({
-				// 			latitude: 113.910789,
-				// 			longitude:22.517763,
-				// 			success: function(e) {
-				// 				console.log('success', e);
-				// 			}
-				// 		});
-				// 	}
-				// });
-
-			}
-
-
 		}
-
-
-
 	}
+};
 </script>
 
+<style lang="less">
+.line {
+	position: relative;
+	top: 38upx;
+	width: 2upx;
+	height: 60upx;
+	background: rgba(14, 94, 86, 0.51);
+}
 
-<style>
-	/* 列表 */
-	.uni-list:after,
-	.uni-list:before {
-		height: 0;
-	}
-
-	.addr {
-		color: #BBBBBB;
-	}
-
-	.shopType {
-		color: #848484;
-	}
-
-	.content {
+.Sudoku {
+	margin-top: 20upx;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	border-top: none;
+	border-bottom: none;
+	.box1 {
+		width: 248upx;
+		height: 248upx;
+		line-height: 40upx;
 		text-align: center;
-		height: 400upx;
+		.text {
+			color: rgba(5, 5, 5, 1);
+			font-size: 26upx;
+			text-align: center;
+			font-family: Arial;
+			display: block;
+			margin-top: 15upx;
+		}
 	}
-
-	.logo {
-		height: 200upx;
-		width: 200upx;
-		margin-top: 200upx;
+	.serviceImg {
+		width: 80upx;
+		height: 80upx;
+		margin-top: 70upx;
+		text-align: center;
 	}
-
-	.title {
-		font-size: 36upx;
-		color: #8f8f94;
+}
+.toright {
+	width: 11upx;
+	height: 11upx;
+	margin-left: 160upx;
+}
+.orderAlert {
+	width: 100%;
+	padding: 0 30upx;
+	height: 70upx;
+	background-color: rgba(255, 255, 255, 1);
+	position: relative;
+	.mes {
+		width: 24upx;
+		height: 38upx;
+		vertical-align: middle;
 	}
-
-	.listFont {
-		font-size: 32upx;
-		color: black;
+	.mesType {
+		margin-left: 36upx;
+		color: rgba(16, 16, 16, 1);
+		font-size: 26upx;
+		text-align: left;
+		font-family: Arial;
 	}
-
-	.shop-distance {
-		display: inline-block;
-		color: #888888;
-		position: absolute;
-		right: 30upx;
+	.mestip {
+		color: rgba(14, 94, 86, 0.51);
+		padding-left: 30upx;
 	}
-
-	.shopBox {
-		background-color: white;
-		padding: 30upx;
-		width: 100%;
-		display: flex;
-		box-sizing: border-box;
+	.minBe {
+		margin-left: 35upx;
+		color: rgba(153, 153, 153, 1);
+		font-size: 22upx;
+		text-align: left;
+		font-family: Arial;
 	}
+}
+.todayData {
+	width: 644upx;
+	height: 126upx;
+	line-height: 126upx;
+	border-radius: 20upx;
+	text-align: center;
+	box-shadow: 0px 0px 10upx 0px rgba(223, 223, 223, 1);
+	border: 2upx solid rgba(255, 255, 255, 0);
+	position: relative;
+	top: -35upx;
+	left: 54upx;
+	background: white;
+	display: inline-flex;
 
-	.shopImage {
-		width: 150upx;
-		height: 140upx;
-		border-radius: 10upx;
-		overflow: hidden;
+	.to1 {
+		flex: 1;
+		.num {
+			text-align: center;
+			color: rgba(14, 94, 86, 1);
+			font-size: 48upx;
+			font-family: PingFangSC-bold;
+			position: relative;
+			top: -20upx;
+			font-family: normal;
+			font-weight: bold;
+		}
+		.tit {
+			opacity: 0.67;
+			color: rgba(14, 94, 86, 1);
+			font-size: 24upx;
+			text-align: center;
+			font-family: Arial;
+			position: relative;
+			top: -98upx;
+		}
 	}
+}
 
-	.shopInfo {
+.head {
+	width: 100%;
+	height: 180upx;
+	background-color: rgba(14, 94, 86, 1);
+	display: flex;
+	.shopLogo {
 		margin-left: 30upx;
+		margin-top: 20upx;
+		width: 100upx;
+		height: 100upx;
+		border-radius: 10upx;
+		vertical-align: middle;
 	}
+	.shopManage {
+		margin-left: 235upx;
+		margin-top: 30upx;
+		width: 110upx;
+		height: 60upx;
+		line-height: 60upx;
+		border-radius: 6upx;
+		background-color: rgba(255, 255, 255, 0);
+		color: rgba(255, 255, 255, 1);
+		font-size: 20upx;
+		text-align: center;
+		font-family: Microsoft Yahei;
+		border: 2upx solid rgba(255, 255, 255, 1);
+		vertical-align: middle;
+	}
+	.box2 {
+		margin-left: 30upx;
+		margin-top: 10upx;
+		.shopName {
+			color: white;
+			font-size: 32upx;
+			text-align: left;
+			font-family: PingFangSC-regular;
+			display: inline-block;
+			vertical-align: middle;
+		}
+		.authIcon {
+			width: 70upx;
+			height: 30upx;
+			border-radius: 16upx;
+			background-color: rgba(168, 216, 185, 1);
+			color: rgba(14, 94, 86, 1);
+			font-size: 16upx;
+			text-align: center;
+			font-family: Microsoft Yahei;
+			display: inline-block;
+			vertical-align: middle;
+			margin-left: 40upx;
+		}
+		.toBottom {
+			display: inline-block;
+			width: 20upx;
+			height: 20upx;
+			vertical-align: middle;
+			margin-left: 10upx;
+		}
+		.addr {
+			line-height: 34upx;
+			color: rgba(255, 255, 255, 1);
+			font-size: 24upx;
+			font-family: Arial;
+			margin-top: 5upx;
+		}
+	}
+}
 </style>

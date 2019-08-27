@@ -1,0 +1,92 @@
+.lineBox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 55rpx;
+}
+.lineBox .t1 {
+  margin-left: 36rpx;
+  color: #8b8b8d;
+  font-size: 28rpx;
+  font-family: Arial;
+  vertical-align: middle;
+  display: inline-block;
+}
+.lineBox .line {
+  margin-left: 32rpx;
+  margin-top: 21rpx;
+  width: 222rpx;
+  height: 3rpx;
+  background: #efefef;
+  vertical-align: middle;
+}
+.today {
+  margin-top: 10rpx;
+  color: #999999;
+  font-size: 28rpx;
+  text-align: center;
+  font-family: Arial;
+}
+.content .box1 {
+  padding: 45rpx 32rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.content .box1 .infoBox {
+  margin-left: 20rpx;
+}
+.content .box1 .infoBox .info2 {
+  margin-top: 22rpx;
+  position: relative;
+}
+.content .box1 .infoBox .userName {
+  color: #999999;
+  font-size: 28rpx;
+  text-align: left;
+  font-family: Arial;
+}
+.content .box1 .infoBox .time {
+  position: absolute;
+  left: 250rpx;
+  top: 11rpx;
+  color: #999999;
+  font-size: 24rpx;
+  text-align: left;
+  font-family: Arial;
+}
+.content .box1 .icon {
+  width: 40rpx;
+  height: 40rpx;
+}
+.content .box1 .tit {
+  width: 115rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  color: #0e5e56;
+  font-size: 28rpx;
+  text-align: left;
+  font-family: Arial;
+}
+.content .box1 .info {
+  margin-top: 20rpx;
+}
+.content .box1 .info .t1 {
+  color: #101010;
+  font-size: 32rpx;
+  text-align: left;
+  font-family: Arial;
+}
+.content .box1 .info .t2 {
+  color: #999999;
+  font-size: 28rpx;
+  text-align: left;
+  font-family: Arial;
+  margin-left: 90rpx;
+}
+

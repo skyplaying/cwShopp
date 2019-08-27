@@ -17,7 +17,7 @@ const store = new Vuex.Store({
 		edition: "1.0.0", //产品版本号（每次上传前修改）
 		lifeNum: '宠善堂',
 		company: '深圳企拼客网络科技有限公司',
-
+		userInfo:'',
 		// 页面传参
 		pageData: {
 			formStoreDescribe: {
@@ -77,6 +77,14 @@ const store = new Vuex.Store({
 		setFormOrderDisplay(state, obj) {
 			console.log(obj)
 			state.pageData.formOrderDisplay = obj;
+		},
+		setUserInfo(state,obj){
+			console.log(obj)
+			state.userInfo=obj;
+			uni.setStorage({
+				key:'user',data:obj
+			})
+			// sessionStorage.setItem('user',obj);
 		},
 	},
 	// 异步操作后，调用mutations去更新状态
@@ -210,25 +218,7 @@ const store = new Vuex.Store({
 				const location = state.location || {};
 				const lngPoint = obj.lngPoint || location.longitude || null;
 				const latPoint = obj.latPoint || location.latitude || null;
-// 				api.shopsInfo({
-// 					loginType,
-// 					lngPoint,
-// 					latPoint,
-// 				}).then((res) => {
-// 					const shopsInfo = res.data.shopsVo || {};
-// 					//纯粹为了兼容后台的任性
-// 					const isBasicsEdition = shopsInfo.shopsName && shopsInfo.storeTelphone ? true : false; //店铺名存在说明第一步完善，店铺号码存在说明第二步完善，两个同时存在说明已经拥有基础版本
-// 					shopsInfo.isBasicsEdition = isBasicsEdition;
-// 					console.log(shopsInfo);
-// 
-// 					commit('login', {
-// 						shopsInfo:shopsInfo.shopsId ? shopsInfo : null,
-// 						loginType: state.loginType=="1" ? "1":loginType
-// 					})
-// 					typeof success == "function" && success(shopsInfo);
-// 				}, (err) => {
-// 					typeof fail == 'function' && fail(err);
-// 				})
+
 			} else {
 				if (err.type != 'ERR_GET_USER_INFO') {
 				  api.showToast('登录失败');

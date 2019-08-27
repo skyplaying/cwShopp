@@ -1,0 +1,109 @@
+.shopBox {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 190rpx;
+  padding: 30rpx;
+}
+.shopBox .storeImg {
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 6rpx;
+}
+.shopBox .info {
+  margin-left: 30rpx;
+}
+.shopBox .info .b3 {
+  color: #101010;
+  font-size: 24rpx;
+  text-align: left;
+  font-family: PingFangSC-regular;
+}
+.shopBox .info .b2 {
+  position: relative;
+}
+.shopBox .info .b2 .toRight {
+  position: absolute;
+  right: -63rpx;
+  height: 28rpx;
+  width: 28rpx;
+  top: 15rpx;
+}
+.shopBox .info .b2 .address {
+  color: #848484;
+  font-size: 28rpx;
+  font-family: Arial;
+}
+.shopBox .info .b1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.shopBox .info .b1 .storeName {
+  color: #000000;
+  font-size: 32rpx;
+  text-align: left;
+  font-family: PingFangSC-bold;
+  margin-right: 10rpx;
+}
+.shopBox .info .b1 .statusIcon {
+  width: 100rpx;
+  height: 45rpx;
+  line-height: 45rpx;
+  border-radius: 4rpx;
+  color: #0e5e56;
+  font-size: 28rpx;
+  text-align: center;
+  font-family: Arial;
+  border: 2rpx solid #0e5e56;
+  vertical-align: middle;
+}
+.shopBox .box1 .red {
+  background: #F53D1E;
+}
+.shopBox .box1 .blue {
+  background: #148FEB;
+}
+.shopBox .box1 .status {
+  position: absolute;
+  bottom: 61rpx;
+  width: 130rpx;
+  height: 30rpx;
+  opacity: 0.85;
+  border-radius: 0px 0px 6rpx 6rpx;
+  background-color: #848484;
+  color: #ffffff;
+  font-size: 16rpx;
+  text-align: center;
+  font-family: Microsoft Yahei;
+}
+.addBtn {
+  position: absolute;
+  right: 30rpx;
+  top: 20rpx;
+  width: 130rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-radius: 6rpx;
+  color: #0e5e56;
+  font-size: 24rpx;
+  text-align: center;
+  font-family: Arial;
+  border: 2rpx solid #0e5e56;
+  display: inline-block;
+}
+.selectBox {
+  margin-left: 20rpx;
+  margin-top: 30rpx;
+  width: 200rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  color: #000000;
+  font-size: 28rpx;
+  font-family: Microsoft Yahei;
+  position: relative;
+}
+

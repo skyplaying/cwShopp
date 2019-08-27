@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "添加商品",
+  "usingComponents": {
+    "upload-img": "/components/mc-image-upload/mc-image-upload"
+  }
+}

@@ -1,0 +1,75 @@
+.toright {
+  position: absolute;
+  right: 36rpx;
+  width: 36rpx;
+  height: 36rpx;
+  vertical-align: middle;
+}
+.content {
+  width: 100%;
+  padding-left: 56rpx;
+}
+.i2 {
+  margin-top: 22rpx;
+}
+.box1 {
+  width: 100%;
+  height: 90rpx;
+  line-height: 90rpx;
+  margin-top: 10rpx;
+  border: 2rpx solid rgba(255, 255, 255, 0);
+}
+.box1 .t1 {
+  vertical-align: middle;
+  margin-left: 22rpx;
+  color: #101010;
+  font-size: 28rpx;
+  text-align: left;
+  font-family: PingFangSC-regular;
+}
+.icon {
+  width: 32rpx;
+  height: 46rpx;
+  vertical-align: middle;
+}
+.account {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 162rpx;
+  border: 1px solid rgba(255, 255, 255, 0);
+  margin-top: 100rpx;
+}
+.account .money {
+  color: #101010;
+  font-size: 40rpx;
+  text-align: left;
+  font-family: PingFangSC-regular;
+}
+.account .tit1 {
+  color: #101010;
+  font-size: 28rpx;
+  text-align: left;
+  font-family: PingFangSC-regular;
+  margin-left: 8rpx;
+}
+.head {
+  margin-top: 60rpx;
+}
+.head .headImg {
+  width: 85rpx;
+  height: 85rpx;
+  border-radius: 50%;
+  margin-left: 70rpx;
+  vertical-align: middle;
+}
+.head .name {
+  margin-left: 50rpx;
+  color: #101010;
+  font-size: 32rpx;
+  text-align: left;
+  font-family: PingFangSC-regular;
+}
+

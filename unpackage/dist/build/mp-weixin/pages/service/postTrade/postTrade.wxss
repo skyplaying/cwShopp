@@ -1,0 +1,119 @@
+.content {
+  margin-bottom: 80rpx;
+}
+.content .serviceModel {
+  margin-top: 10rpx;
+}
+.content .serviceModel .btnBox {
+  margin-top: 60rpx;
+  margin-left: 285rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.content .serviceModel .btnBox .putUp {
+  color: #0e5e56;
+  border: 2rpx solid #0e5e56;
+}
+.content .serviceModel .btnBox .putDown {
+  color: #d92b2b;
+  border: 2rpx solid #d92b2b;
+}
+.content .serviceModel .btnBox > view {
+  display: inline-block;
+  width: 130rpx;
+  height: 60rpx;
+  border-radius: 6rpx;
+  color: #848484;
+  font-size: 24rpx;
+  line-height: 60rpx;
+  text-align: center;
+  font-family: Microsoft Yahei;
+  border: 2rpx solid #e5e5e5;
+  margin-right: 25rpx;
+}
+.content .serviceModel .info {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 30rpx;
+  width: 100%;
+}
+.content .serviceModel .info .serviceImg {
+  width: 130rpx;
+  height: 116rpx;
+  border-radius: 10rpx;
+}
+.content .serviceModel .info .fontSymbol {
+  margin-left: 36rpx;
+}
+.content .serviceModel .info .fontSymbol .name {
+  color: #101010;
+  font-size: 32rpx;
+  text-align: left;
+  font-family: PingFangSC-bold;
+}
+.content .serviceModel .info .fontSymbol .price {
+  color: #0e5e56;
+  font-size: 28rpx;
+  text-align: left;
+  font-family: PingFangSC-regular;
+}
+.addBtn {
+  position: absolute;
+  right: 30rpx;
+  top: 20rpx;
+  width: 130rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-radius: 6rpx;
+  color: #0e5e56;
+  font-size: 24rpx;
+  text-align: center;
+  font-family: Arial;
+  border: 2rpx solid #0e5e56;
+  display: inline-block;
+}
+.selectPop {
+  width: 205rpx;
+  margin-left: 20rpx;
+  border: 1rpx solid #888888;
+  display: inline-block;
+  position: absolute;
+  background: white;
+}
+.selectPop .s1 {
+  width: 180rpx;
+  height: 35rpx;
+  text-align: left;
+  font-size: 25rpx;
+  line-height: 35rpx;
+  border: none;
+  padding-left: 25rpx;
+  margin-top: 5rpx;
+}
+.selectPop .s1:hover {
+  background: #108ee9;
+  color: white;
+}
+.selectBox {
+  margin-left: 20rpx;
+  margin-top: 30rpx;
+  width: 200rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  color: #000000;
+  font-size: 28rpx;
+  font-family: Microsoft Yahei;
+  position: relative;
+}
+.selectBox .bottomArrows {
+  width: 15rpx;
+  height: 15rpx;
+  position: absolute;
+  left: 200rpx;
+  top: 18rpx;
+}
+

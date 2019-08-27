@@ -1,0 +1,16 @@
+.content {
+  width: 100%;
+  padding: 20rpx;
+  padding-bottom: 250rpx;
+  font-size: 48rpx;
+  width: 710rpx;
+  color: #101010;
+  font-size: 28rpx;
+  text-align: left;
+  font-family: PingFangSC-regular;
+  line-height: 40rpx;
+}
+.tc {
+  text-align: center;
+}
+

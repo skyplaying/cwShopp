@@ -1,0 +1,179 @@
+.content {
+  width: 100%;
+}
+.verifyPhone .v1 {
+  margin-top: 30rpx;
+  margin-left: 18rpx;
+  width: 690rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  background-color: #f2f2f2;
+  font-size: 28rpx;
+  font-family: PingFangSC-regular;
+  font-family: Arial;
+  padding-left: 20rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.verifyPhone .v1 .phoneInput {
+  margin-left: 24rpx;
+  width: 560rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  background-color: rgba(255, 255, 255, 0);
+  color: #cccccc;
+  font-size: 28rpx;
+  text-align: left;
+  font-family: Microsoft Yahei;
+}
+.verifyPhone .v2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 18rpx;
+  margin-top: 25rpx;
+}
+.verifyPhone .v2 .getAuthCodeBtn {
+  width: 246rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  background-color: #A8D8B9;
+  color: #24936E;
+  font-size: 30rpx;
+  text-align: center;
+  font-family: Arial;
+  margin-left: 20rpx;
+}
+.verifyPhone .v2 .authBox {
+  width: 445rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  background-color: #f2f2f2;
+  font-size: 28rpx;
+  font-family: Arial;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.verifyPhone .v2 .authBox .b1 {
+  margin-left: 18rpx;
+}
+.verifyPhone .v2 .authBox .authInput {
+  margin-left: 25rpx;
+  width: 300rpx;
+  height: 90rpx;
+  background-color: rgba(255, 255, 255, 0);
+  font-size: 28rpx;
+  text-align: left;
+  font-family: Microsoft Yahei;
+}
+.submitWithDraw {
+  margin-left: 32rpx;
+  margin-top: 70rpx;
+  width: 686rpx;
+  height: 94rpx;
+  line-height: 94rpx;
+  border-radius: 8rpx;
+  background-color: #0e5e56;
+  color: #ffffff;
+  font-size: 36rpx;
+  text-align: center;
+  font-family: Microsoft Yahei;
+}
+.canDrawBox {
+  color: #888888;
+  font-size: 28rpx;
+  text-align: left;
+  font-family: Arial;
+  height: 76rpx;
+  line-height: 76rpx;
+}
+.canDrawBox .t1 {
+  margin-left: 18rpx;
+}
+.canDrawBox .allWithDraw {
+  position: absolute;
+  right: 30rpx;
+  color: #0e5e56;
+  font-size: 28rpx;
+  text-align: left;
+  font-family: Arial;
+}
+.line {
+  height: 3rpx;
+  margin-left: 30rpx;
+  background: #efefef;
+  margin-top: 50rpx;
+}
+.withBox {
+  padding-left: 30rpx;
+  margin-top: 30rpx;
+  width: 100%;
+  border: 3rpx solid #efefef;
+}
+.withBox .t1 {
+  color: #666666;
+  font-size: 28rpx;
+  text-align: left;
+  font-family: Arial;
+}
+.withBox .y {
+  color: #101010;
+  font-size: 48rpx;
+  font-family: Arial;
+}
+.withBox .t2 {
+  width: 700rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  color: #101010;
+  font-size: 48rpx;
+  font-family: Arial;
+}
+.payNumBox {
+  padding-left: 30rpx;
+  margin-top: 30rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 120rpx;
+  width: 100%;
+  border: 2rpx solid #efefef;
+  position: relative;
+}
+.payNumBox .payIcon {
+  width: 80rpx;
+  height: 80rpx;
+  vertical-align: middle;
+  margin-top: 20rpx;
+  margin-right: 30rpx;
+}
+.payNumBox .t1 {
+  color: #101010;
+  font-size: 32rpx;
+  text-align: left;
+  font-family: Arial;
+  position: relative;
+  top: 13rpx;
+}
+.payNumBox .t2 {
+  color: #5a5a5a;
+  font-size: 28rpx;
+  text-align: left;
+  font-family: Arial;
+}
+.payNumBox .toRight {
+  width: 30rpx;
+  height: 30rpx;
+  display: inline-block;
+  vertical-align: middle;
+  position: absolute;
+  right: 72rpx;
+  top: 46rpx;
+}
+

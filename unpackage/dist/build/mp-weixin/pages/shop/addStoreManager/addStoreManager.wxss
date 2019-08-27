@@ -1,0 +1,153 @@
+.content {
+  width: 100%;
+  padding-left: 60rpx;
+  padding-top: 20rpx;
+}
+.selectPop1 {
+  width: 170rpx;
+  border: 1rpx solid #888888;
+  display: inline-block;
+  background: white;
+  z-index: 50;
+  left: 145rpx;
+  position: absolute;
+  top: 70rpx;
+}
+.selectPop1 .s1 {
+  width: 147rpx;
+  height: 35rpx;
+  text-align: left;
+  font-size: 25rpx;
+  line-height: 35rpx;
+  border: none;
+  padding-left: 25rpx;
+}
+.selectPop1 .s1:hover {
+  background: #108ee9;
+  color: white;
+}
+.selectGender {
+  width: 168rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #101010;
+  font-size: 28rpx;
+  font-family: Microsoft Yahei;
+  margin-left: 85rpx;
+  position: relative;
+}
+.selectGender .bottomArrows {
+  width: 15rpx;
+  height: 15rpx;
+  position: absolute;
+  left: 125rpx;
+  top: 30rpx;
+}
+.btnArea {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 100rpx;
+}
+.btnArea .saveBtn {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 98rpx;
+  line-height: 98rpx;
+  background-color: #ffffff;
+  border: 2rpx solid #0e5e56;
+  color: #0e5e56;
+  font-size: 36rpx;
+  text-align: center;
+  font-family: PingFangSC-regular;
+}
+.btnArea .nextBtn {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 98rpx;
+  line-height: 98rpx;
+  background-color: #0e5e56;
+  border: 2rpx solid rgba(5, 5, 5, 0.08);
+  color: #ffffff;
+  font-size: 36rpx;
+  text-align: center;
+  font-family: PingFangSC-regular;
+}
+.uploadBox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 30rpx;
+}
+.uploadBox .examImg1 {
+  width: 322rpx;
+  height: 216rpx;
+  vertical-align: middle;
+  margin-top: 11rpx;
+}
+.uploadBox .t1 {
+  color: #101010;
+  font-size: 28rpx;
+  text-align: center;
+  font-family: PingFangSC-regular;
+}
+.uploadBox .imageItem,
+.uploadBox .imageUpload {
+  width: 296rpx;
+  height: 216rpx;
+  border-radius: 8rpx;
+  background-color: rgba(0, 0, 0, 0.02);
+  text-align: center;
+  border: 2rpx solid rgba(0, 0, 0, 0.15);
+  vertical-align: middle;
+  margin-left: 36rpx;
+}
+.inputBox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 10rpx;
+}
+.inputBox .tit1 {
+  color: #101010;
+  font-size: 28rpx;
+  text-align: left;
+  font-family: PingFangSC-regular;
+  vertical-align: middle;
+  display: inline-block;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.inputBox .input1 {
+  margin-left: 85rpx;
+  width: 400rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #888888;
+  font-size: 28rpx;
+  text-align: left;
+  font-family: Microsoft Yahei;
+  border: 2rpx solid rgba(255, 255, 255, 0);
+  vertical-align: middle;
+  display: inline-block;
+}
+.logoTit {
+  color: #101010;
+  font-size: 32rpx;
+  text-align: left;
+  font-family: SourceHanSansSC-regular;
+  margin-top: 50rpx;
+  margin-bottom: 20rpx;
+}
+.logoTit .t2 {
+  font-size: 25rpx;
+}
+

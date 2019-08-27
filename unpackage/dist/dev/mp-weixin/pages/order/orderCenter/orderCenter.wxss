@@ -1,0 +1,328 @@
+.onDoing {
+  padding: 30rpx;
+  width: 100%;
+}
+.onDoing .tit1 {
+  height: 90rpx;
+  line-height: 90rpx;
+  color: #101010;
+  font-size: 28rpx;
+  text-align: left;
+  font-family: PingFangSC-bold;
+}
+.onDoing .infoBox > view {
+  padding: 7rpx 0;
+}
+.onDoing .completeOrder {
+  margin-left: 95rpx;
+  margin-top: 102rpx;
+  width: 485rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  border-radius: 5px;
+  background-color: #0e5e56;
+  color: #ffffff;
+  font-size: 14px;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid rgba(255, 255, 255, 0);
+}
+.onDoing .uploadPetImgBox {
+  margin-top: 52rpx;
+}
+.onDoing .uploadPetImgBox .imageItem,
+.onDoing .uploadPetImgBox .imageUpload {
+  margin-left: 406rpx;
+}
+.onDoing .uploadPetImgBox .tit {
+  left: 15px;
+  top: 760px;
+  color: #101010;
+  font-size: 32rpx;
+  text-align: left;
+  font-family: PingFangSC-regular;
+  vertical-align: middle;
+  margin-top: 65rpx;
+}
+.onDoing .btnBox {
+  margin-top: 20rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.onDoing .btnBox .btn {
+  width: 150rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-radius: 10rpx;
+  background-color: rgba(255, 255, 255, 0);
+  color: #0e5e56;
+  font-size: 28rpx;
+  text-align: center;
+  font-family: Arial;
+  border: 2rpx solid #0e5e56;
+}
+.onDoing .petInfo {
+  padding-bottom: 62rpx;
+  border-bottom: 3rpx solid #e5e5e5;
+}
+.onDoing .petInfo .petImg {
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 50rpx;
+}
+.onDoing .petInfo .petInfoBox {
+  margin-top: 12rpx;
+  margin-left: 50rpx;
+}
+.onDoing .petInfo .petInfoBox .info > view {
+  padding: 10rpx 0;
+}
+.onDoing .petInfo .petInfoBox .info {
+  color: #666666;
+  font-size: 24rpx;
+  text-align: left;
+  font-family: PingFangSC-regular;
+}
+.onDoing .petInfo .petInfoBox .info .t1 {
+  margin-left: 128rpx;
+}
+.onDoing .petInfo .petInfoBox .info .t2 {
+  margin-left: 15rpx;
+}
+.onDoing .petInfo .petInfoBox .petName {
+  color: #101010;
+  font-size: 32rpx;
+  text-align: left;
+  font-family: PingFangSC-regular;
+}
+.onDoing .petInfo .petInfoBox .t1 {
+  color: #666666;
+  font-size: 24rpx;
+  text-align: left;
+  font-family: PingFangSC-regular;
+}
+.onDoing .petInfo .petInfoBox .t2 {
+  left: 150px;
+  top: 534px;
+  width: 24px;
+  height: 17px;
+  color: #666666;
+  font-size: 12px;
+  text-align: left;
+  font-family: PingFangSC-regular;
+}
+.onDoing .infoBox {
+  color: #666666;
+  font-size: 28rpx;
+  text-align: left;
+  font-family: PingFangSC-regular;
+  padding-bottom: 10rpx;
+  border-bottom: 2rpx solid #e5e5e5;
+}
+.onDoing .infoBox .t2 {
+  position: absolute;
+  left: 210rpx;
+}
+.onDoing .infoBox .t3 {
+  margin-left: 15rpx;
+}
+.tabClass {
+  color: #0e5e56;
+  font-size: 32rpx;
+  text-align: center;
+  font-family: Microsoft Yahei;
+}
+.tabNt {
+  color: #000000;
+  font-size: 32rpx;
+  text-align: center;
+  font-family: Microsoft Yahei;
+}
+.orderBtnBox {
+  margin-top: 20rpx;
+}
+.orderBtnBox .callUser {
+  margin-left: 380rpx;
+  width: 150rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-radius: 8rpx;
+  background-color: #ffffff;
+  color: #888888;
+  font-size: 28rpx;
+  text-align: center;
+  font-family: Microsoft Yahei;
+  border: 2rpx solid #e5e5e5;
+}
+.orderBtnBox .startService {
+  margin-left: 40rpx;
+  width: 150rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0);
+  color: #0e5e56;
+  font-size: 28rpx;
+  text-align: center;
+  font-family: Microsoft Yahei;
+  border: 2rpx solid #0e5e56;
+}
+.orderBox {
+  padding-top: 36rpx;
+  margin-top: 22rpx;
+}
+.orderInfoBox {
+  color: #333333;
+  font-size: 28rpx;
+  text-align: left;
+  font-family: PingFangSC-regular;
+  margin-left: 30rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 40rpx;
+  position: relative;
+  padding: 34rpx 0;
+  width: 690rpx;
+  border-bottom: 3rpx solid #efefef;
+  border-top: 3rpx solid #efefef;
+}
+.orderInfoBox .petPhoto {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50rpx;
+  border-radius: 50%;
+  position: absolute;
+  right: 30rpx;
+}
+.orderInfoBox .petName {
+  color: #888888;
+  font-size: 26rpx;
+  text-align: left;
+  font-family: PingFangSC-regular;
+  position: absolute;
+  right: 54rpx;
+  top: 145rpx;
+}
+.orderInfoBox .info {
+  line-height: 40rpx;
+}
+.orderInfoBox .info .b1 {
+  padding: 8rpx 0;
+}
+.orderInfoBox .info .b1 .t2 {
+  position: absolute;
+  left: 168rpx;
+}
+.orderInfoBox .info .b1 .time {
+  color: #0e5e56;
+  font-weight: bold;
+  position: absolute;
+  left: 266rpx;
+}
+.orderInfoBox .info .b1 .t3 {
+  position: absolute;
+  left: 273rpx;
+}
+.pending .orderBox {
+  padding-top: 36rpx;
+  margin-top: 22rpx;
+}
+.pending .orderBox .orderInfo {
+  padding: 34rpx 0;
+  width: 690rpx;
+  border-bottom: 3rpx solid #efefef;
+  border-top: 3rpx solid #efefef;
+}
+.pending .orderBox .head {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.pending .orderBox .head .serviceName {
+  color: #101010;
+  font-size: 32rpx;
+  text-align: left;
+  font-family: PingFangSC-regular;
+}
+.pending .orderBox .head .price {
+  color: #101010;
+  font-size: 28rpx;
+  text-align: left;
+  font-family: PingFangSC-bold;
+  font-weight: bold;
+}
+.pending .orderBox .head .payStatus {
+  color: #0e5e56;
+  font-size: 28rpx;
+  text-align: left;
+  font-family: PingFangSC-regular;
+  position: absolute;
+  right: 30rpx;
+}
+.pending .orderBox .status {
+  width: 136rpx;
+  height: 48rpx;
+  line-height: 48rpx;
+  border-radius: 0px 20rpx 20rpx 0px;
+  background-color: #0e5e56;
+  color: #ffffff;
+  font-size: 24rpx;
+  text-align: center;
+  font-family: Arial;
+  border: 2rpx solid rgba(255, 255, 255, 0);
+}
+.hasComplete .orderBox {
+  padding-top: 36rpx;
+  margin-top: 22rpx;
+}
+.hasComplete .orderBox .orderInfo {
+  padding: 34rpx 0;
+  width: 690rpx;
+  border-bottom: 3rpx solid #efefef;
+  border-top: 3rpx solid #efefef;
+}
+.hasComplete .orderBox .head {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.hasComplete .orderBox .head .serviceName {
+  color: #101010;
+  font-size: 32rpx;
+  text-align: left;
+  font-family: PingFangSC-regular;
+}
+.hasComplete .orderBox .head .price {
+  color: #101010;
+  font-size: 28rpx;
+  text-align: left;
+  font-family: PingFangSC-bold;
+  font-weight: bold;
+}
+.hasComplete .orderBox .head .payStatus {
+  color: #0e5e56;
+  font-size: 28rpx;
+  text-align: left;
+  font-family: PingFangSC-regular;
+  position: absolute;
+  right: 30rpx;
+}
+.hasComplete .orderBox .status {
+  width: 136rpx;
+  height: 48rpx;
+  line-height: 48rpx;
+  border-radius: 0px 20rpx 20rpx 0px;
+  background-color: #0e5e56;
+  color: #ffffff;
+  font-size: 24rpx;
+  text-align: center;
+  font-family: Arial;
+  border: 2rpx solid rgba(255, 255, 255, 0);
+}
+

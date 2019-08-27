@@ -1,0 +1,289 @@
+.btnArea {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 100rpx;
+}
+.btnArea .saveBtn {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 98rpx;
+  line-height: 98rpx;
+  background-color: #ffffff;
+  border: 2rpx solid #0e5e56;
+  color: #0e5e56;
+  font-size: 36rpx;
+  text-align: center;
+  font-family: PingFangSC-regular;
+}
+.btnArea .nextBtn {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 98rpx;
+  line-height: 98rpx;
+  background-color: #0e5e56;
+  border: 2rpx solid rgba(5, 5, 5, 0.08);
+  color: #ffffff;
+  font-size: 36rpx;
+  text-align: center;
+  font-family: PingFangSC-regular;
+}
+.yingye {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 45rpx;
+}
+.shopInfoDes {
+  width: 593rpx;
+  height: 236rpx;
+  line-height: 40rpx;
+  color: #888888;
+  font-size: 28rpx;
+  text-align: left;
+  font-family: Microsoft Yahei;
+  border: 2rpx solid #eaeaea;
+  padding: 20rpx;
+}
+.tip1 {
+  width: 296rpx;
+  height: 72rpx;
+  color: #666666;
+  font-size: 24rpx;
+  text-align: left;
+  font-family: SourceHanSansSC-regular;
+}
+.box2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.box2 .upload1 .imageItem,
+.box2 .upload1 .imageUpload {
+  margin-left: 36rpx;
+  width: 300rpx;
+  height: 200rpx;
+  border-radius: 8rpx;
+  background-color: rgba(0, 0, 0, 0.02);
+  text-align: center;
+  border: 2rpx solid rgba(0, 0, 0, 0.15);
+}
+.box2 .examBox1 {
+  width: 300rpx;
+  height: 216rpx;
+}
+.box2 .examBox1 .commomExamImg {
+  width: 300rpx;
+  height: 216rpx;
+}
+.box2 .examBox1 .examB {
+  position: absolute;
+  bottom: 8rpx;
+  width: 297rpx;
+  height: 54rpx;
+  line-height: 54rpx;
+  background-color: rgba(0, 0, 0, 0.42);
+  color: #ffffff;
+  font-size: 28rpx;
+  text-align: center;
+  font-family: PingFangSC-regular;
+}
+.headTit {
+  color: #101010;
+  font-size: 28rpx;
+  text-align: left;
+  font-family: PingFangSC-regular;
+  margin-top: 10rpx;
+  margin-bottom: 20rpx;
+}
+.logoBox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 20rpx;
+  position: relative;
+}
+.logoBox .exam {
+  position: absolute;
+  bottom: 16rpx;
+  width: 208rpx;
+  height: 54rpx;
+  line-height: 54rpx;
+  background-color: rgba(0, 0, 0, 0.42);
+  text-align: center;
+  color: white;
+  opacity: 0.5;
+  font-size: 28rpx;
+  font-family: PingFangSC-regular;
+}
+.logoBox .imageItem,
+.logoBox .imageUpload {
+  width: 208rpx;
+  height: 208rpx;
+  border-radius: 8rpx;
+  background-color: rgba(0, 0, 0, 0.02);
+  text-align: center;
+  border: 2rpx solid rgba(0, 0, 0, 0.15);
+  margin-top: -2rpx;
+  margin-left: 128rpx;
+}
+.logoBox .logoText {
+  width: 208rpx;
+  position: absolute;
+  left: 380rpx;
+  top: 87rpx;
+}
+.logoBox .logoText .t1 {
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 28rpx;
+  text-align: center;
+  font-family: PingFangSC-regular;
+  margin-left: 15rpx;
+}
+.logoBox .logoText .t2 {
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 24rpx;
+  text-align: center;
+  font-family: PingFangSC-regular;
+}
+.logoExam {
+  width: 208rpx;
+  height: 208rpx;
+}
+.logoTit {
+  color: #101010;
+  font-size: 32rpx;
+  text-align: left;
+  font-family: SourceHanSansSC-regular;
+  margin-top: 50rpx;
+  margin-bottom: 20rpx;
+}
+.logoTit .t2 {
+  font-size: 25rpx;
+}
+.jian {
+  width: 26rpx;
+  height: 4rpx;
+  background: #bbbbbb;
+  margin: 36rpx 28rpx;
+}
+.units {
+  border-radius: 15rpx;
+  padding-left: 20rpx;
+  width: 150rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #101010;
+  font-size: 28rpx;
+  font-family: Microsoft Yahei;
+  border: 2rpx solid #bbbbbb;
+  position: relative;
+}
+.units .bottomArrows {
+  width: 15rpx;
+  height: 15rpx;
+  position: absolute;
+  left: 125rpx;
+  top: 30rpx;
+}
+.popBox {
+  position: relative;
+}
+.ab0 {
+  position: absolute;
+  top: 0;
+}
+.ab1 {
+  position: absolute;
+  left: 59rpx;
+}
+.ab2 {
+  position: absolute;
+  left: 315rpx;
+}
+.selectPop {
+  width: 170rpx;
+  border: 1rpx solid #888888;
+  display: inline-block;
+  background: white;
+  z-index: 50;
+}
+.selectPop .s1 {
+  width: 147rpx;
+  height: 35rpx;
+  text-align: left;
+  font-size: 25rpx;
+  line-height: 35rpx;
+  border: none;
+  padding-left: 25rpx;
+}
+.selectPop .s1:hover {
+  background: #108ee9;
+  color: white;
+}
+.content {
+  width: 100%;
+  padding: 20rpx 20rpx 20rpx 54rpx;
+}
+.toRight {
+  position: absolute;
+  right: 35rpx;
+  width: 28rpx;
+  height: 28rpx;
+  display: inline-block;
+  left: 638rpx;
+  top: 35rpx;
+}
+.text1 {
+  color: #101010;
+  font-size: 32rpx;
+  text-align: left;
+  font-family: PingFangSC-regular;
+}
+.text1 .t2 {
+  font-size: 25rpx;
+}
+.mapShow {
+  width: 612rpx;
+  height: 370rpx;
+}
+.box1 {
+  width: 706px;
+  height: 100rpx;
+  line-height: 100rpx;
+  border: 2rpx solid rgba(255, 255, 255, 0);
+  margin-top: 10rpx;
+  position: relative;
+}
+.box1 .input {
+  width: 470rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  color: #888888;
+  font-size: 28rpx;
+  text-align: left;
+  font-family: Microsoft Yahei;
+  display: inline-block;
+  position: absolute;
+  left: 165rpx;
+}
+.f1 {
+  width: 112rpx;
+  height: 46rpx;
+  color: #101010;
+  font-size: 28rpx;
+  text-align: left;
+  font-family: PingFangSC-regular;
+  display: inline-block;
+}
+

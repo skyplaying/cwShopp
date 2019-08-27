@@ -1,0 +1,145 @@
+.bannerImg {
+  width: 100%;
+  height: 386rpx;
+}
+.exampleBox {
+  width: 100%;
+  padding: 0rpx 48rpx 28rpx;
+}
+.exampleBox .box1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 165rpx;
+}
+.exampleBox .box1 .text {
+  width: 302rpx;
+  height: 158rpx;
+  color: #101010;
+  font-size: 28rpx;
+  text-align: left;
+  font-family: PingFangSC-regular;
+}
+.exampleBox .box1 .bt1 {
+  color: #101010;
+  font-size: 28rpx;
+  text-align: left;
+  font-family: PingFangSC-regular;
+  vertical-align: middle;
+  position: relative;
+  top: 50rpx;
+}
+.exampleBox .box1 .bt2 {
+  color: #101010;
+  font-size: 28rpx;
+  text-align: left;
+  font-family: PingFangSC-regular;
+  vertical-align: middle;
+}
+.exampleBox .box1 .bt3 {
+  font-size: 25rpx;
+  margin-top: 25rpx;
+  color: #CCCCCC;
+}
+.exampleBox .imgExamBox {
+  position: absolute;
+  width: 228rpx;
+  vertical-align: middle;
+  right: 30rpx;
+}
+.exampleBox .examImg {
+  width: 228rpx;
+  height: 150rpx;
+}
+.exampleBox .examImgWaterMark {
+  position: absolute;
+  bottom: 13rpx;
+  width: 100%;
+  height: 34rpx;
+  color: #ffffff;
+  font-size: 24rpx;
+  text-align: center;
+  font-family: PingFangSC-regular;
+  background: #000000;
+  opacity: 0.5;
+}
+.addShopBtn {
+  width: 590rpx;
+  height: 98rpx;
+  line-height: 98rpx;
+  border-radius: 10rpx;
+  background-color: #0e5e56;
+  border: 2rpx solid rgba(5, 5, 5, 0.08);
+  font-size: 36rpx;
+  text-align: center;
+  font-family: PingFangSC-regular;
+  color: white;
+  margin-top: 20rpx;
+  margin-left: 42rpx;
+}
+.flowBox {
+  position: relative;
+  left: 48rpx;
+  top: -62rpx;
+  width: 660rpx;
+  height: 386rpx;
+  background: white;
+  line-height: 20px;
+  border-radius: 20rpx;
+  color: #101010;
+  font-size: 28rpx;
+  text-align: center;
+  -webkit-box-shadow: 0px 0px 10rpx 4rpx rgba(255, 255, 255, 0);
+          box-shadow: 0px 0px 10rpx 4rpx rgba(255, 255, 255, 0);
+  font-family: Arial;
+  border: 2rpx solid rgba(255, 255, 255, 0);
+}
+.flowBox .tip1 {
+  color: #101010;
+  font-size: 28rpx;
+  text-align: center;
+  font-family: PingFangSC-regular;
+  margin-top: 20rpx;
+}
+.flowBox .numBox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 146rpx;
+  margin-top: 42rpx;
+}
+.flowBox .numBox > view {
+  width: 68rpx;
+  height: 68rpx;
+  line-height: 68rpx;
+  color: #101010;
+  font-size: 28rpx;
+  text-align: center;
+  font-family: Arial;
+  border: 2rpx solid #e6e6e6;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+.flowBox .numBox > image {
+  margin-left: 28rpx;
+  margin-right: 28rpx;
+  width: 35rpx;
+  height: 35rpx;
+  vertical-align: middle;
+  margin-top: 18rpx;
+}
+.flowBox .infoText {
+  margin-left: 136rpx;
+  margin-top: 16rpx;
+  height: 40rpx;
+  color: #101010;
+  font-size: 28rpx;
+  text-align: left;
+  font-family: PingFangSC-regular;
+}
+.flowBox .infoText > text {
+  margin-right: 45rpx;
+}
+

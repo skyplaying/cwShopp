@@ -23,6 +23,13 @@ function formatNumber(n) {
   n = n.toString()
   return n[1] ? n : '0' + n
 }
+//将时间 年月日转换成中文 前提格式 2019-08-06
+function formatTimeChina(date){
+	  var year = date.slice(0,4)
+	var month =parseInt(date.slice(6,7)) 
+	var day = parseInt(date.slice(8)) 
+	return year+'年'+ month+'月'+day+'日';
+}
 
 // 随机获取颜色
 function getRandomColor() {
@@ -112,5 +119,6 @@ module.exports = {
 	getRandomColor:getRandomColor,
 	formatTime: formatTime,
 	formatLocation: formatLocation,
-	dateUtils: dateUtils
+	dateUtils: dateUtils,
+	formatTimeChina:formatTimeChina,
 }

@@ -1,0 +1,453 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .imageUploadContainer {
+		padding: 10upx 5upx;
+		margin: 10upx 5upx;
+	} */
+.dragging {
+	opacity: 0.5;
+}
+.imageUploadList {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	        flex-wrap: wrap;
+}
+.imageItem,
+.imageUpload {
+	width: 160rpx;
+	height: 160rpx;
+	margin: 10rpx 0;
+	margin-left: 16rpx;
+	position: relative;
+}
+.imageItem-row-first {
+	margin-left: 0;
+}
+.imageDel {
+	position: absolute;
+	right: 5rpx;
+	top: 9rpx;
+	/* 	position: relative;
+	left: 120upx;
+	bottom: 160upx; */
+	background-color: rgba(0, 0, 0, 0.5);
+	color: #ffffff;
+	width: 36rpx;
+	text-align: center;
+	line-height: 36rpx;
+	border-radius: 60rpx;
+	font-size: 40rpx;
+}
+.imageItem image,
+.moveImage,
+.imageCover {
+	width: 160rpx;
+	height: 160rpx;
+	border-radius: 8rpx;
+}
+
+/* 注释掉的后面可以改回来 */
+.imageUpload {
+	/* position: relative; */
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	border: 1px solid #d9d9d9;
+	border-radius: 8rpx;
+	/* left: 30upx; */
+}
+.imageUpload:before,
+.imageUpload:after {
+	content: ' ';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	    transform: translate(-50%, -50%);
+	background-color: #d9d9d9;
+}
+.imageUpload:before {
+	width: 4rpx;
+	height: 79rpx;
+}
+.imageUpload:after {
+	width: 79rpx;
+	height: 4rpx;
+}
+.moveImage {
+	position: absolute;
+	-webkit-transform: scale(1.2);
+	    -ms-transform: scale(1.2);
+	        transform: scale(1.2);
+}
+.imageCover {
+	position: relative;
+	left: 0;
+	bottom: 178rpx;
+	width: 100%;
+	text-align: center;
+	line-height: 160rpx;
+	background-color: rgba(0, 0, 0, 0.5);
+	font-size: 24rpx;
+	color: white;
+}
+.firstImageLabel {
+	position: relative;
+	left: 0;
+	bottom: 98rpx;
+	width: 100%;
+	text-align: center;
+	line-height: 40rpx;
+	background-color: #0081ff;
+	font-size: 24rpx;
+	color: white;
+	opacity: 0.8;
+}
+

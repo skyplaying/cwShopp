@@ -1,0 +1,130 @@
+.content {
+  width: 100%;
+  padding-left: 45rpx;
+}
+.switchStore {
+  width: 100%;
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  color: #101010;
+  font-size: 28rpx;
+  font-family: PingFangSC-regular;
+}
+.autoMaticOrder {
+  margin-left: 465rpx;
+  width: 100rpx;
+  height: 60rpx;
+  vertical-align: middle;
+}
+.shopDes {
+  height: 90rpx;
+  border: 1px solid rgba(255, 255, 255, 0);
+  color: #101010;
+  font-size: 28rpx;
+  text-align: left;
+  font-family: PingFangSC-regular;
+  position: relative;
+}
+.shopDes .date {
+  margin-left: 200rpx;
+  width: 163rpx;
+  color: #101010;
+  font-size: 28rpx;
+  text-align: left;
+  font-family: PingFangSC-regular;
+  display: inline-block;
+}
+.shopDes .hour {
+  width: 163rpx;
+  color: #101010;
+  font-size: 28rpx;
+  text-align: left;
+  font-family: PingFangSC-regular;
+  display: inline-block;
+  position: absolute;
+  right: 70rpx;
+  top: 22rpx;
+}
+.shopDes .t1 {
+  line-height: 90rpx;
+  display: inline-block;
+  height: 90rpx;
+}
+.shopDes .address {
+  position: absolute;
+  right: 110rpx;
+  display: inline-block;
+  vertical-align: middle;
+  width: 70%;
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: right;
+  overflow: hidden;
+}
+.shopDes .t2 {
+  position: absolute;
+  right: 110rpx;
+  display: inline-block;
+  vertical-align: middle;
+  width: 35%;
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+}
+.shopDes .t3 {
+  position: absolute;
+  right: 110rpx;
+  top: -2rpx;
+  display: inline-block;
+  vertical-align: middle;
+  width: 35%;
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: right;
+}
+.shopDes .toRight {
+  position: absolute;
+  right: 59rpx;
+  width: 36rpx;
+  height: 36rpx;
+  top: 25rpx;
+}
+.editHistory {
+  position: relative;
+  left: 600rpx;
+  margin-top: 16rpx;
+  color: #101010;
+  font-size: 28rpx;
+  text-align: left;
+  font-family: PingFangSC-regular;
+}
+.shopBox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 28rpx;
+  padding-left: 30rpx;
+  width: 100%;
+  height: 204rpx;
+  line-height: 20px;
+  text-align: center;
+  border: 2rpx solid rgba(255, 255, 255, 0);
+  margin-top: 30rpx;
+}
+.shopBox .shopLogo {
+  width: 172rpx;
+  height: 116rpx;
+}
+.shopBox .info1 {
+  margin-left: 50rpx;
+  color: #101010;
+  font-size: 28rpx;
+  text-align: left;
+  font-family: PingFangSC-regular;
+}
+.shopBox .info1 > text {
+  display: block;
+}
+

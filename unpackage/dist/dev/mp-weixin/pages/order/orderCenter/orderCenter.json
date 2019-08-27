@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "订单中心",
+  "usingComponents": {
+    "wuc-tab": "/components/wuc-tab/wuc-tab",
+    "img-upload": "/components/mc-image-upload/mc-image-upload"
+  }
+}

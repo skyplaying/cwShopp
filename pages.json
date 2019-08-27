@@ -1,101 +1,247 @@
 {
-	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages		
+		
+		{
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": "登录"
+			}
+		},
+		{
+			"path": "pages/auditAccount/auditAccount",
+			"style": {
+				"navigationBarTitleText": "登录"
+			}
+		},
+
+		{
+			"path": "pages/shop/addShopOne/addShopOne",
+			"style": {
+				"navigationBarTitleText": "1/3"
+			}
+		},
+	
+
+		{
+			"path": "pages/shop/StoresInfo/StoresInfo",
+			"style": {
+				"navigationBarTitleText": "门店信息"
+			}
+		},
+		{
+			"path": "pages/shop/shopManage/shopManage",
+			"style": {"navigationBarTitleText":"店铺管理"}
+		},
+
+		{
+			"path": "pages/shop/addStoreManager/addStoreManager",
+			"style": {
+				"navigationBarTitleText": "2/3"
+			}
+		},
+		{
+			"path": "pages/shop/shopAddIndex/shopAddIndex",
+			"style": {
+				"navigationBarTitleText": "商家中心"
+			}
+		},
+		{
+			"path": "pages/shop/storeAudit/storeAudit",
+			"style": {
+				"navigationBarTitleText": "商家中心"
+			}
+		},
+		{
+			"path": "pages/service/publishingService/publishingService",
+			"style": {
+				"navigationBarTitleText": "发布服务",
+				"navigationBarTextStyle": "white",
+				"navigationBarBackgroundColor": "#0E5E56"
+			}
+		},
+		{
+			"path": "pages/service/addService/usualModel/freezeModel",
+			"style": {
+				"navigationBarTitleText": "添加服务"
+			}
+		},
+
+		{
+			"path": "pages/shop/addShareProfit/addShareProfit",
+			"style": {
+				"navigationBarTitleText": "3/3"
+			}
+		},
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "宠善堂"
+				"navigationBarTitleText": "商家中心"
 			}
+		},
+
+		{
+			"path": "pages/mine/mine",
+			"style": {
+				"navigationBarTitleText": "商家中心"
+			}
+		},
+
+		{
+			"path": "pages/service/addService/pickUpModel/pickUpModel",
+			"style": {
+				"navigationBarTitleText": "添加服务"
+			}
+		},
+		{
+			"path": "pages/service/addService/riteModel/riteModel",
+			"style": {
+				"navigationBarTitleText": "添加服务"
+			}
+		},
+		{
+			"path": "pages/service/addService/IncinerateModel/IncinerateModel",
+			"style": {
+				"navigationBarTitleText": "添加服务"
+			}
+		},
+
+
+		{
+			"path": "pages/service/addService/addService",
+			"style": {
+				"navigationBarTitleText": "添加服务"
+			}
+		},
+		{
+			"path": "pages/service/postTrade/postTrade",
+			"style": {
+				"navigationBarTitleText": "发布商品",
+				"navigationBarTextStyle": "white",
+				"navigationBarBackgroundColor": "#0E5E56"
+
+			}
+		},
+		{
+			"path": "pages/service/addGoods/addGoods",
+			"style": {
+				"navigationBarTitleText": "添加商品"
+			}
+		},
+		{
+			"path": "pages/shop/agreement/agreement",
+			"style": {
+				"navigationBarTitleText": "3/3"
+			}
+		},
+
+		{
+			"path": "pages/order/orderCenter/orderCenter",
+			"style": {
+				"navigationBarTitleText": "订单中心"
+			}
+		},
+		{
+			"path": "pages/payment/addAliPayAccount/addAliPayAccount",
+			"style": {
+				"navigationBarTitleText": "添加支付宝账号"
+			}
+		},
+
+		{
+			"path": "pages/payment/accountBalance/accountBalance",
+			"style": {
+				"navigationBarTitleText": "收入明细",
+				"navigationBarTextStyle": "white",
+				"navigationBarBackgroundColor": "#0E5E56"
+			}
+		},
+		{
+			"path": "pages/payment/withDrawResult/withDrawResult",
+			"style": {
+				"navigationBarTitleText": "结果详情"
+			}
+		},
+		{
+			"path": "pages/payment/withDraw/withDraw",
+			"style": {
+				"navigationBarTitleText": "提现"
+			}
+		},
+
+		{
+			"path": "pages/payment/payment",
+			"style": {
+				"navigationBarTitleText": "余额",
+				"navigationBarTextStyle": "white",
+				"navigationBarBackgroundColor": "#0E5E56"
+			}
+		},
+
+		{
+			"path": "pages/shop/editHistory/editHistory",
+			"style": {
+				"navigationBarTitleText": "修订记录"
+			}
+		},
+
+		{
+			"path": "pages/messageRemind/messageRemind",
+			"style": {
+				"navigationBarTitleText": "消息提醒"
+			}
+		},
+		{
+			"path": "pages/order/order",
+			"style": {}
+		}, {
+			"path": "pages/pcPage/pcPage",
+			"style": {}
+
+		}, {
+			"path": "pages/userAccountStatus/userAccountStatus",
+			"style": {}
 		}
-	    ,{
-            "path" : "pages/followOrder/followOrder",
-            "style" : {}
-        }
-        ,{
-            "path" : "pages/onlineService/onlineService",
-            "style" : {
-				"navigationBarTitleText": "在线客服"
-			}
-        }
-        ,{
-            "path" : "pages/shop/shopCenter/shopCenter",
-            "style" : {}
-        }
-        ,{
-            "path" : "pages/order/orderList/orderList",
-            "style" : {}
-        }
-        ,{
-            "path" : "pages/order/shoipList/shoipList",
-            "style" : {}
-        }
-        ,{
-            "path" : "pages/order/payOrder /payOrder ",
-            "style" : {}
-        }
-        ,{
-            "path" : "pages/shop/shopInfo/shopInfo",
-            "style" : {}
-        }
-        ,{
-            "path" : "pages/order/paySuccess/paySuccess",
-            "style" : {}
-        }
-        ,{
-            "path" : "pages/order/cancelReason/cancelReason",
-            "style" : {}
-        }
-        ,{
-            "path" : "pages/pet/petInfo/petInfo",
-            "style" : {}
-        }
-        ,{
-            "path" : "pages/mine/myOrderList/myOrderList",
-            "style" : {}
-        }
-        ,{
-            "path" : "pages/mine/myOrderDetail/myOrderDetail",
-            "style" : {}
-        }
-        ,{
-            "path" : "pages/mine/myEvaluation/myEvaluation",
-            "style" : {}
-        }
-        ,{
-            "path" : "pages/commonProblem/commonProblem",
-            "style" : {}
-        }
-    ],
+	],
 	"permission": {
 		"scope.userLocation": {
 			"desc": "你的位置信息将用于小程序位置接口的效果展示"
 		}
 	},
-
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "宠善堂",
-		"navigationBarBackgroundColor": "skyblue",
-		"backgroundColor": "white"
+		"navigationBarBackgroundColor": "#ffffff",
+		"backgroundColor": "#FFFFFF",
+		"backgroundColorTop": "#ffffff",
+		"backgroundColorBottom": "#ffffff"
+	},
+	// 底部状态栏
+	"tabBar": {
+		"color": "#929292",
+		"selectedColor": "#0E5E56",
+		"borderStyle": "white",
+		"backgroundColor": "white",
+		"list": [{
+				"pagePath": "pages/index/index", //跳转页面
+				"iconPath": "static/shop/indexGrey.png", //默认图片
+				"selectedIconPath": "static/shop/seshouye.png", //选择 选项的时候展示
+				"text": "首页" //文字介绍
+			},
+			{
+				"pagePath": "pages/order/orderCenter/orderCenter",
+				"iconPath": "static/shop/orderGrey.png",
+				"selectedIconPath": "static/shop/orderGreen.png",
+				"text": "订单"
+			},
+			{
+				"pagePath": "pages/mine/mine",
+				"iconPath": "static/shop/myGrey.png",
+				"selectedIconPath": "static/shop/mine.png",
+				"text": "我的"
+			}
+		]
 	}
 
-	// 底部状态栏
-	// "tabBar": {
-	//        "color": "#7A7E83",
-	//        "selectedColor": "#3cc51f",
-	//        "borderStyle": "black",
-	//        "backgroundColor": "#ffffff",
-	//        "list": [{
-	//            "pagePath": "pages/component/index",
-	//            "iconPath": "static/image/icon_component.png",
-	//            "selectedIconPath": "static/image/icon_component_HL.png",
-	//            "text": "组件"
-	//        }, {
-	//            "pagePath": "pages/API/index", //跳转页面
-	//            "iconPath": "static/image/icon_API.png",  //默认图片
-	//            "selectedIconPath": "static/image/icon_API_HL.png", //选择 选项的时候展示
-	//            "text": "接口" //文字介绍
-	//        }]
-	// 	},
 	// "sitemapLocation": "sitemap.json"
 
 

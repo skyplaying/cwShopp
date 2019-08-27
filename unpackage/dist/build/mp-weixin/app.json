@@ -1,0 +1,79 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/shop/addShopOne/addShopOne",
+    "pages/shop/StoresInfo/StoresInfo",
+    "pages/shop/shopManage/shopManage",
+    "pages/auditAccount/auditAccount",
+    "pages/shop/addStoreManager/addStoreManager",
+    "pages/shop/shopAddIndex/shopAddIndex",
+    "pages/shop/storeAudit/storeAudit",
+    "pages/service/publishingService/publishingService",
+    "pages/service/addService/usualModel/freezeModel",
+    "pages/shop/addShareProfit/addShareProfit",
+    "pages/index/index",
+    "pages/mine/mine",
+    "pages/service/addService/pickUpModel/pickUpModel",
+    "pages/service/addService/riteModel/riteModel",
+    "pages/service/addService/IncinerateModel/IncinerateModel",
+    "pages/service/addService/addService",
+    "pages/service/postTrade/postTrade",
+    "pages/service/addGoods/addGoods",
+    "pages/shop/agreement/agreement",
+    "pages/order/orderCenter/orderCenter",
+    "pages/payment/addAliPayAccount/addAliPayAccount",
+    "pages/payment/accountBalance/accountBalance",
+    "pages/payment/withDrawResult/withDrawResult",
+    "pages/payment/withDraw/withDraw",
+    "pages/payment/payment",
+    "pages/shop/editHistory/editHistory",
+    "pages/messageRemind/messageRemind",
+    "pages/order/order",
+    "pages/pcPage/pcPage",
+    "pages/userAccountStatus/userAccountStatus"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "宠善堂",
+    "navigationBarBackgroundColor": "#ffffff",
+    "backgroundColor": "#FFFFFF",
+    "backgroundColorTop": "#ffffff",
+    "backgroundColorBottom": "#ffffff"
+  },
+  "tabBar": {
+    "color": "#929292",
+    "selectedColor": "#0E5E56",
+    "borderStyle": "white",
+    "backgroundColor": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "static/shop/indexGrey.png",
+        "selectedIconPath": "static/shop/seshouye.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/order/orderCenter/orderCenter",
+        "iconPath": "static/shop/orderGrey.png",
+        "selectedIconPath": "static/shop/orderGreen.png",
+        "text": "订单"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "iconPath": "static/shop/myGrey.png",
+        "selectedIconPath": "static/shop/mine.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "宠善堂需要获取您的位置信息提供服务"
+    }
+  },
+  "usingComponents": {
+    "load-image": "/components/uni-load-more/uni-load-more"
+  },
+  "sitemapLocation": "sitemap57.json"
+}

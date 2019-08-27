@@ -1,0 +1,106 @@
+.content {
+  width: 100%;
+  padding-top: 40rpx;
+  padding-left: 65rpx;
+}
+.btnArea {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.btnArea .saveBtn {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 98rpx;
+  line-height: 98rpx;
+  background-color: #ffffff;
+  border: 2rpx solid #0e5e56;
+  color: #0e5e56;
+  font-size: 36rpx;
+  text-align: center;
+  font-family: PingFangSC-regular;
+}
+.btnArea .nextBtn {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 98rpx;
+  line-height: 98rpx;
+  background-color: #0e5e56;
+  border: 2rpx solid rgba(5, 5, 5, 0.08);
+  color: #ffffff;
+  font-size: 36rpx;
+  text-align: center;
+  font-family: PingFangSC-regular;
+}
+.lawBox {
+  position: absolute;
+  bottom: 130rpx;
+}
+.lawBox radio {
+  margin-left: 140rpx;
+  width: 32rpx;
+  height: 32rpx;
+}
+.lawBox .t1 {
+  margin-left: 20rpx;
+  color: #101010;
+  font-size: 28rpx;
+  text-align: left;
+  font-family: PingFangSC-regular;
+}
+.explainBox .tit {
+  color: #101010;
+  font-size: 32rpx;
+  text-align: left;
+  font-family: PingFangSC-regular;
+  margin-top: 35rpx;
+  display: block;
+}
+.explainBox .textarea {
+  width: 575rpx;
+  height: 395rpx;
+  color: #101010;
+  font-size: 28rpx;
+  text-align: left;
+  font-family: PingFangSC-regular;
+  margin-top: 16rpx;
+}
+.box1 {
+  height: 90rpx;
+  line-height: 90rpx;
+  border: 2rpx solid rgba(255, 255, 255, 0);
+}
+.box1 .t1 {
+  color: #101010;
+  font-size: 28rpx;
+  text-align: left;
+  font-family: SourceHanSansSC-regular;
+}
+.box1 .t2 {
+  margin-left: 120rpx;
+  color: #0e5e56;
+  font-size: 28rpx;
+  text-align: left;
+  font-family: SourceHanSansSC-regular;
+}
+.rite1 {
+  color: #101010;
+  font-size: 32rpx;
+  text-align: left;
+  font-family: PingFangSC-regular;
+}
+.line {
+  width: 640rpx;
+  height: 3rpx;
+  background: #eaeaea;
+  margin-top: 15rpx;
+}
+
